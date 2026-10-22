@@ -139,20 +139,18 @@ I'm finishing a **B.Tech in Robotics & Automation** at Symbiosis Institute of Te
 
 ### `SCENE 04 — SYSTEMS & CASE STUDIES`
 
-<sub>The research behind some of the repos above, plus coursework and private builds that aren't public. Each row says honestly how far it has been proven.</sub>
+<sub>The research behind some of the repos above, plus coursework and private builds that aren't public.</sub>
 
-<sub><b>Status key</b> &nbsp; ● implemented &nbsp; ✓ tested / verified &nbsp; ◔ in development &nbsp; ◐ simulated &nbsp; ? unverified &nbsp; ○ planned</sub>
-
-| Project | What it is | Stack | Status |
-|---|---|---|---|
-| **Aegis-Net** <br><sub>flagship · systems</sub> | Network intelligence and autonomous DevSecOps: telemetry → C analytics engine → anomaly detection → correlation / root cause → LLM explanation → recommended action → dashboard | C · Python · LLM · telemetry | ? components · ◐ concept demo · source private |
-| **IoT Autonomous Mobile Robot** <br><sub>robotics · research</sub> | Research robot that takes tasks over IoT and allocates them autonomously, framed for warehouse and hospital-logistics use. Public ROS 2 side: [autonomous-bot](https://github.com/aryankhanna1409/autonomous-bot) | Embedded · IoT · task allocation | ● platform · ? field results |
-| **Sentinel** <br><sub>computer vision · research</sub> | RGB + thermal fusion so people are easier to find in the dark. Code: [sentinel](https://github.com/aryankhanna1409/sentinel) | YOLO11 · OpenCV · thermal | ◔ pipeline · ? field testing |
-| **Credit-card reward optimisation** <br><sub>applied ML · published</sub> | Segment spenders, then personalise rewards. Notebooks: [credit-card](https://github.com/aryankhanna1409/credit-card) | Random Forest · XGBoost · K-Means | ✓ published, IJCIS 2025 |
-| **LiDAR spatial indexing** <br><sub>algorithms · coursework</sub> | KD-tree index for nearest-neighbour and radius queries on streaming point clouds (my part of a group project) | Python · KD-tree | ● prototype · ? benchmarks |
-| **IR path-following AGV** <br><sub>design · simulation</sub> | Differential-drive hospital AGV that follows a marked path to carry medicine, with an optional 2-DOF arm | Arduino · PID · DH kinematics | ● design · ◐ motion model |
-| **CollegeOS** <br><sub>software · personal tool</sub> | Streamlit attendance manager that keeps an 80% target visible across overlapping lecture and lab slots | Streamlit · SQLAlchemy · Pydantic | ✓ phase 1 architecture · ○ attendance engine |
-| **Shakespeare RAG chatbot** <br><sub>LLM apps</sub> | Two versions: a Mistral wrapper, and one built from scratch. Both tested | Python · RAG · Mistral | ✓ both versions tested |
+| Project | What it is | Stack |
+|---|---|---|
+| **Aegis-Net** <br><sub>flagship · systems</sub> | Network intelligence and autonomous DevSecOps: telemetry → C analytics engine → anomaly detection → correlation / root cause → LLM explanation → recommended action → dashboard | C · Python · LLM · telemetry |
+| **IoT Autonomous Mobile Robot** <br><sub>robotics · research</sub> | Research robot that takes tasks over IoT and allocates them autonomously, framed for warehouse and hospital-logistics use. Public ROS 2 side: [autonomous-bot](https://github.com/aryankhanna1409/autonomous-bot) | Embedded · IoT · task allocation |
+| **Sentinel** <br><sub>computer vision · research</sub> | RGB + thermal fusion so people are easier to find in the dark. Code: [sentinel](https://github.com/aryankhanna1409/sentinel) | YOLO11 · OpenCV · thermal |
+| **Credit-card reward optimisation** <br><sub>applied ML · published</sub> | Segment spenders, then personalise rewards. Notebooks: [credit-card](https://github.com/aryankhanna1409/credit-card) | Random Forest · XGBoost · K-Means |
+| **LiDAR spatial indexing** <br><sub>algorithms · coursework</sub> | KD-tree index for nearest-neighbour and radius queries on streaming point clouds (my part of a group project) | Python · KD-tree |
+| **IR path-following AGV** <br><sub>design · simulation</sub> | Differential-drive hospital AGV that follows a marked path to carry medicine, with an optional 2-DOF arm | Arduino · PID · DH kinematics |
+| **CollegeOS** <br><sub>software · personal tool</sub> | Streamlit attendance manager that keeps an 80% target visible across overlapping lecture and lab slots | Streamlit · SQLAlchemy · Pydantic |
+| **Shakespeare RAG chatbot** <br><sub>LLM apps</sub> | Two versions: a Mistral wrapper, and one built from scratch | Python · RAG · Mistral |
 
 ---
 
@@ -182,7 +180,7 @@ I'm finishing a **B.Tech in Robotics & Automation** at Symbiosis Institute of Te
 <summary><b>Education & certifications</b></summary>
 <br>
 
-- **B.Tech, Mechatronics, Robotics & Automation Engineering**, Symbiosis Institute of Technology, Pune · Jun 2023 – Jun 2027
+- **B.Tech, Robotics & Automation Engineering**, Symbiosis Institute of Technology, Pune · Jun 2023 – Jun 2027
 - **Diploma, Business Administration & Management**, Symbiosis Institute of Business Management, Pune · Jan 2024 – Jun 2026
 - Certifications: Advanced Data Analytics Specialization · Python and SQL Basics · Operating Systems · Digital Marketing Tools and Techniques · Python Bootcamps
 
@@ -190,7 +188,7 @@ I'm finishing a **B.Tech in Robotics & Automation** at Symbiosis Institute of Te
 
 #### `RESEARCH`
 
-<img src="assets/research.svg" width="100%" alt="R squared 0.99, 62.5% personalisation gain, published in IJCIS 2025, 5 publications" />
+**62.5% better reward personalisation** from an ML system combining Random Forest, XGBoost and K-Means, published in the *International Journal of Computational Intelligence Systems* (2025). Five publications in total, across applied ML, AI ethics and consumer behaviour.
 
 <details>
 <summary><b>Publications</b></summary>
@@ -214,9 +212,9 @@ I'm finishing a **B.Tech in Robotics & Automation** at Symbiosis Institute of Te
 
 **Building in robotics, AI or software systems? Say hello.**
 
-<a href="mailto:forestfocus1@gmail.com"><img src="https://img.shields.io/badge/Email-0b1020?style=for-the-badge&logo=gmail&logoColor=67e8f9" alt="Email" /></a>
-<a href="https://www.linkedin.com/in/aryandkhanna1"><img src="https://img.shields.io/badge/LinkedIn-0b1020?style=for-the-badge&logo=linkedin&logoColor=67e8f9" alt="LinkedIn" /></a>
-<a href="https://github.com/aryankhanna1409"><img src="https://img.shields.io/badge/@aryankhanna1409-0b1020?style=for-the-badge&logo=github&logoColor=67e8f9" alt="GitHub" /></a>
+<a href="mailto:forestfocus1@gmail.com"><img src="assets/contact-email.svg" height="44" alt="Email" /></a>
+<a href="https://www.linkedin.com/in/aryandkhanna1"><img src="assets/contact-linkedin.svg" height="44" alt="LinkedIn" /></a>
+<a href="https://github.com/aryankhanna1409"><img src="assets/contact-github.svg" height="44" alt="GitHub" /></a>
 
 `ROBOTICS · AI · SOFTWARE` · Pune, Maharashtra, IN
 
