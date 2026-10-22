@@ -7,8 +7,8 @@ Modes
 import datetime, json, os, sys, urllib.request
 
 USER = "aryankhanna1409"
-BG, EMPTY = "#06080b", "#121820"
-LEVELS = ["#3a1f0e", "#7a3a14", "#c25a1e", "#ff7a2f"]
+BG, EMPTY = "#0b1020", "#141c33"
+LEVELS = ["#1e3a8a", "#2f6df0", "#5aa2ff", "#67e8f9"]
 
 
 def fetch_calendar(token):
@@ -52,16 +52,18 @@ def render(days, total, out):
                      for i, c in enumerate([EMPTY] + LEVELS))
     svg = f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {width} 170" width="100%" role="img" aria-label="Contribution heatmap">
 <rect width="{width}" height="170" rx="10" fill="{BG}"/>
-<g font-family="JetBrains Mono, ui-monospace, Menlo, monospace" font-size="9" fill="#7d8896">
+<g font-family="JetBrains Mono, ui-monospace, Menlo, monospace" font-size="9" fill="#8b98b5">
 <text x="14" y="16" font-size="11" fill="#e9edf2" font-weight="600">CONTRIBUTION TRACE</text>
-<text x="{width-14}" y="16" font-size="11" fill="#ff7a2f" text-anchor="end">{total} in the last year</text>
+<text x="{width-14}" y="16" font-size="11" fill="#67e8f9" text-anchor="end">{total} in the last year</text>
 {''.join(months)}
 <text x="14" y="{y0+1*(cell+gap)+9}">Mon</text><text x="14" y="{y0+3*(cell+gap)+9}">Wed</text><text x="14" y="{y0+5*(cell+gap)+9}">Fri</text>
 <text x="{width-174}"  y="{y0+7*(cell+gap)+19}" text-anchor="end">less</text>
 <text x="{width-76}" y="{y0+7*(cell+gap)+19}">more</text>
 </g>
+<defs><linearGradient id="beam" x1="0" x2="1"><stop offset="0" stop-color="#67e8f9" stop-opacity="0"/><stop offset="1" stop-color="#67e8f9" stop-opacity="0.35"/></linearGradient></defs>
 {legend}
 {''.join(rects)}
+<rect x="0" y="{y0-6}" width="60" height="{7*(cell+gap)+8}" fill="url(#beam)"><animate attributeName="x" values="{x0-60};{x0+53*(cell+gap)}" dur="5s" repeatCount="indefinite"/></rect>
 </svg>'''
     open(out, "w").write(svg)
 
