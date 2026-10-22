@@ -1,4 +1,4 @@
-"""Generate experience.svg (timeline) and research.svg (headline numbers) for the profile README."""
+"""Generate experience.svg (timeline) and the contact buttons for the profile README."""
 import os
 from xml.sax.saxutils import escape as esc
 OUT = os.path.join(os.path.dirname(__file__), "..", "assets")
@@ -40,20 +40,17 @@ nx = X(NOW)
 s += f'<path d="M{nx:.1f} {TOP-18}V{H-30}" stroke="{CYAN}" stroke-width="1.5"/><text x="{nx:.1f}" y="{TOP-22}" font-size="10" fill="{CYAN}" text-anchor="middle" letter-spacing="2">NOW</text>'
 open(f"{OUT}/experience.svg", "w").write(s + "</g></svg>")
 
-# ---------- research numbers ----------
-RW, RHt = 960, 190
-stats = [("0.99", "R² · reward model", CYAN), ("62.5%", "personalisation gain", BLUE), ("IJCIS", "published 2025", VIOLET), ("5", "listed publications", CYAN)]
-r = f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {RW} {RHt}" width="100%" role="img" aria-label="Research: R squared 0.99, 62.5% personalisation gain, published in IJCIS 2025, 5 publications"><defs>{GLOW}</defs>'
-r += f'<rect width="{RW}" height="{RHt}" rx="12" fill="{BG}" stroke="{DIM}"/>'
-r += f'<text x="24" y="32" font-size="12" fill="{INK}" font-weight="700" letter-spacing="2" font-family="{FONT}">RESEARCH / APPLIED ML</text>'
-r += f'<text x="{RW-24}" y="32" font-size="11" fill="{MUTED}" text-anchor="end" font-family="{FONT}">figures as reported in the paper</text>'
-cw = (RW - 48) / len(stats)
-for i, (big, small, col) in enumerate(stats):
-    cx = 24 + cw * i + cw / 2
-    if i: r += f'<path d="M{24+cw*i:.0f} 62V160" stroke="{DIM}"/>'
-    r += (f'<text x="{cx:.0f}" y="120" font-size="54" font-weight="800" fill="{col}" text-anchor="middle" font-family="{SANS}" filter="url(#glow)" opacity="0">{big}'
-          f'<animate attributeName="opacity" from="0" to="1" dur=".8s" begin="{i*.25:.2f}s" fill="freeze"/>'
-          f'<animate attributeName="y" from="136" to="120" dur=".8s" begin="{i*.25:.2f}s" fill="freeze"/></text>')
-    r += f'<text x="{cx:.0f}" y="152" font-size="11" fill="{MUTED}" text-anchor="middle" letter-spacing="1" font-family="{FONT}">{small.upper()}</text>'
-open(f"{OUT}/research.svg", "w").write(r + "</svg>")
+# ---------- contact buttons (self-hosted so they never depend on a badge service) ----------
+ICONS = {
+    "email": f'<rect x="-9" y="-6.5" width="18" height="13" rx="2" fill="none" stroke="{CYAN}" stroke-width="1.6"/><path d="M-9 -5.5L0 1.5L9 -5.5" fill="none" stroke="{CYAN}" stroke-width="1.6"/>',
+    "linkedin": f'<rect x="-9" y="-9" width="18" height="18" rx="3" fill="none" stroke="{CYAN}" stroke-width="1.6"/><text y="4.5" font-size="11" font-weight="700" fill="{CYAN}" text-anchor="middle" font-family="{SANS}">in</text>',
+    "github": f'<circle r="9" fill="none" stroke="{CYAN}" stroke-width="1.6"/><path d="M-3.5 7.5V3.5C-3.5 2-2.5 1.5-1.5 1C-5 0.5-6-1.5-6-4C-6-5.5-5-6.5-5-6.5C-5.5-7.5-5-8.5-5-8.5C-5-8.5-3.5-8.5-2-7C0-7.5 0-7.5 2-7C3.5-8.5 5-8.5 5-8.5C5-8.5 5.5-7.5 5-6.5C5-6.5 6-5.5 6-4C6-1.5 5 0.5 1.5 1C2.5 1.5 3.5 2 3.5 3.5V7.5" fill="none" stroke="{CYAN}" stroke-width="1.2"/>',
+}
+for key, label in [("email", "EMAIL"), ("linkedin", "LINKEDIN"), ("github", "@ARYANKHANNA1409")]:
+    bw = 70 + len(label) * 9.6
+    open(f"{OUT}/contact-{key}.svg", "w").write(
+        f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {bw} 44" width="{bw}" height="44" role="img" aria-label="{label.title()}">'
+        f'<rect x="1" y="1" width="{bw-2}" height="42" rx="21" fill="{BG}" stroke="{DIM}" stroke-width="1.5"/>'
+        f'<g transform="translate(28,22)">{ICONS[key]}</g>'
+        f'<text x="48" y="27" font-size="13" font-weight="700" fill="{INK}" letter-spacing="2" font-family="{FONT}">{label}</text></svg>')
 print("ok")
