@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=rect&color=06080b&height=220&section=header&text=ARYAN%20KHANNA&fontSize=64&fontColor=e9edf2&fontAlignY=42&desc=ROBOTICS%20%2F%20AI%20%2F%20SOFTWARE&descSize=18&descAlignY=66&descColor=ff7a2f&animation=fadeIn" width="100%" alt="Aryan Khanna: Robotics / AI / Software" />
+<img src="assets/hero.svg" width="100%" alt="Aryan Khanna: Robotics / AI / Software, with an animated LiDAR scan" />
 
 <a href="https://github.com/aryankhanna1409">
   <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=500&size=18&pause=1400&color=FF7A2F&center=true&vCenter=true&width=760&lines=I+build+intelligent+systems+that+start+on+a+robot;...and+end+in+software.;Sensing+%C2%B7+Planning+%C2%B7+Learning+%C2%B7+Data+systems" alt="Typing headline" />
@@ -34,6 +34,8 @@ I'm a research assistant (since September 2024) working across machine learning,
 ---
 
 ### `02 — THE PATH`
+
+<img src="assets/pipeline.svg" width="100%" alt="Sense, perceive, plan, act, learn" />
 
 | Stage | Focus | Proof |
 |---|---|---|
@@ -78,6 +80,19 @@ I'm a research assistant (since September 2024) working across machine learning,
 | `W-03` | 📊 [**finintel**](https://github.com/aryankhanna1409/finintel) | Financial RAG system: SEC filings to grounded, citation-backed advisory reports, with a knowledge graph and a Claude agent |
 | `W-04` | 🎨 [**style-transfer-cnn**](https://github.com/aryankhanna1409/style-transfer-cnn) | Neural style transfer on VGG-19 with a CLI and a local browser UI |
 
+<br>
+
+<table align="center">
+  <tr>
+    <td align="center" width="50%"><a href="https://github.com/aryankhanna1409/sentinel"><img src="https://raw.githubusercontent.com/aryankhanna1409/sentinel/main/assets/demo.gif" alt="Sentinel HUD demo" /></a><br><sub><b>Sentinel</b> · RGB → NIR → thermal targeting HUD</sub></td>
+    <td align="center" width="50%"><a href="https://github.com/aryankhanna1409/finintel"><img src="https://raw.githubusercontent.com/aryankhanna1409/finintel/main/assets/demo.gif" alt="finintel demo" /></a><br><sub><b>finintel</b> · grounded, citation-backed reports</sub></td>
+  </tr>
+  <tr>
+    <td align="center" width="50%"><a href="https://github.com/aryankhanna1409/overthinkers-assistant"><img src="https://raw.githubusercontent.com/aryankhanna1409/overthinkers-assistant/main/assets/demo.gif" alt="Overthinker's Assistant demo" /></a><br><sub><b>Overthinker's Assistant</b> · decision trees from a sentence</sub></td>
+    <td align="center" width="50%"><a href="https://github.com/aryankhanna1409/one-click-crave"><img src="https://raw.githubusercontent.com/aryankhanna1409/one-click-crave/main/assets/demo.gif" alt="One Click Crave demo" /></a><br><sub><b>One Click Crave</b> · meal picker that learns your habits</sub></td>
+  </tr>
+</table>
+
 ---
 
 ### `05 — LIVE FROM GITHUB`
@@ -88,7 +103,7 @@ I'm a research assistant (since September 2024) working across machine learning,
 </p>
 
 <p align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=aryankhanna1409&bg_color=06080b&color=ff7a2f&line=ff7a2f&point=e9edf2&area=true&area_color=ff7a2f&hide_border=true" alt="Contribution graph" width="100%" />
+  <img src="assets/contributions.svg" width="100%" alt="Contribution heatmap" />
 </p>
 
 ---
