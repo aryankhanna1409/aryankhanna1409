@@ -91,6 +91,9 @@ I'm a research assistant (since September 2024) working across machine learning,
     <td align="center" width="50%"><a href="https://github.com/aryankhanna1409/overthinkers-assistant"><img src="https://raw.githubusercontent.com/aryankhanna1409/overthinkers-assistant/main/assets/demo.gif" alt="Overthinker's Assistant demo" /></a><br><sub><b>Overthinker's Assistant</b> · decision trees from a sentence</sub></td>
     <td align="center" width="50%"><a href="https://github.com/aryankhanna1409/one-click-crave"><img src="https://raw.githubusercontent.com/aryankhanna1409/one-click-crave/main/assets/demo.gif" alt="One Click Crave demo" /></a><br><sub><b>One Click Crave</b> · meal picker that learns your habits</sub></td>
   </tr>
+  <tr>
+    <td align="center" colspan="2"><a href="https://github.com/aryankhanna1409/kinematics-calculator"><img src="https://raw.githubusercontent.com/aryankhanna1409/kinematics-calculator/main/assets/demo.gif" width="50%" alt="Kinematics Calculator demo" /></a><br><sub><b>Kinematics Calculator</b> · forward and inverse kinematics, animated in 3D</sub></td>
+  </tr>
 </table>
 
 ---
