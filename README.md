@@ -105,6 +105,10 @@ I'm a research assistant (since September 2024) working across machine learning,
 </p>
 
 <p align="center">
+  <img src="https://raw.githubusercontent.com/aryankhanna1409/aryankhanna1409/output/snake-dark.svg" width="100%" alt="Contribution snake" />
+</p>
+
+<p align="center">
   <img src="assets/languages.svg" width="100%" alt="Language mix" />
 </p>
 
