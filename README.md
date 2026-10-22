@@ -10,12 +10,7 @@
 
 <br>
 
-```text
-SYSTEM    ● Online
-STATUS    B.Tech Robotics & Automation · class of 2027
-BASE      Pune, IN
-FOCUS     Robotics → AI → Software systems
-```
+<img src="assets/terminal.svg" width="100%" alt="Terminal: whoami, now, skills, coffee" />
 
 ---
 
@@ -47,6 +42,8 @@ I'm a research assistant (since September 2024) working across machine learning,
 
 ### `03 — ENGINEERING`
 
+<img src="assets/orbit.svg" width="100%" alt="Skills orbiting the stack" />
+
 <p>
   <img src="https://img.shields.io/badge/Python-0b1020?style=for-the-badge&logo=python&logoColor=5aa2ff" alt="Python" />
   <img src="https://img.shields.io/badge/C++-0b1020?style=for-the-badge&logo=cplusplus&logoColor=5aa2ff" alt="C++" />
@@ -73,14 +70,17 @@ I'm a research assistant (since September 2024) working across machine learning,
 
 ### `04 — PROJECTS`
 
-| | Project | What it is |
-|---|---|---|
-| `W-01` | 🛰️ [**Sentinel**](https://github.com/aryankhanna1409/sentinel) | Portable search-and-rescue scanner: occlusion-aware human detection across RGB, NIR and thermal views with a live targeting HUD |
-| `W-02` | 🤖 [**autonomous-bot**](https://github.com/aryankhanna1409/autonomous-bot) | ROS 2 robot with ESKF localization, SLAM, Nav2 navigation, an MQTT IoT dashboard and an OpenRMF swarm auction |
-| `W-03` | 📊 [**finintel**](https://github.com/aryankhanna1409/finintel) | Financial RAG system: SEC filings to grounded, citation-backed advisory reports, with a knowledge graph and a Claude agent |
-| `W-04` | 🎨 [**style-transfer-cnn**](https://github.com/aryankhanna1409/style-transfer-cnn) | Neural style transfer on VGG-19 with a CLI and a local browser UI |
+<table>
+  <tr><td width="50%"><a href="https://github.com/aryankhanna1409/sentinel"><img src="https://raw.githubusercontent.com/aryankhanna1409/sentinel/main/assets/banner.svg" alt="Sentinel" width="100%" /></a></td><td width="50%"><a href="https://github.com/aryankhanna1409/autonomous-bot"><img src="https://raw.githubusercontent.com/aryankhanna1409/autonomous-bot/main/assets/banner.svg" alt="autonomous-bot" width="100%" /></a></td></tr>
+  <tr><td width="50%"><a href="https://github.com/aryankhanna1409/finintel"><img src="https://raw.githubusercontent.com/aryankhanna1409/finintel/main/assets/banner.svg" alt="finintel" width="100%" /></a></td><td width="50%"><a href="https://github.com/aryankhanna1409/style-transfer-cnn"><img src="https://raw.githubusercontent.com/aryankhanna1409/style-transfer-cnn/main/assets/banner.svg" alt="style-transfer-cnn" width="100%" /></a></td></tr>
+  <tr><td width="50%"><a href="https://github.com/aryankhanna1409/overthinkers-assistant"><img src="https://raw.githubusercontent.com/aryankhanna1409/overthinkers-assistant/main/assets/banner.svg" alt="overthinkers-assistant" width="100%" /></a></td><td width="50%"><a href="https://github.com/aryankhanna1409/one-click-crave"><img src="https://raw.githubusercontent.com/aryankhanna1409/one-click-crave/main/assets/banner.svg" alt="one-click-crave" width="100%" /></a></td></tr>
+  <tr><td width="50%"><a href="https://github.com/aryankhanna1409/auto_wordle"><img src="https://raw.githubusercontent.com/aryankhanna1409/auto_wordle/main/assets/banner.svg" alt="auto_wordle" width="100%" /></a></td><td width="50%"><a href="https://github.com/aryankhanna1409/murdle"><img src="https://raw.githubusercontent.com/aryankhanna1409/murdle/main/assets/banner.svg" alt="murdle" width="100%" /></a></td></tr>
+  <tr><td width="50%"><a href="https://github.com/aryankhanna1409/SnackSave"><img src="https://raw.githubusercontent.com/aryankhanna1409/SnackSave/main/assets/banner.svg" alt="SnackSave" width="100%" /></a></td><td width="50%"><a href="https://github.com/aryankhanna1409/credit-card"><img src="https://raw.githubusercontent.com/aryankhanna1409/credit-card/main/assets/banner.svg" alt="credit-card" width="100%" /></a></td></tr>
+</table>
 
 <br>
+
+#### In action
 
 <table align="center">
   <tr>
@@ -101,12 +101,11 @@ I'm a research assistant (since September 2024) working across machine learning,
 ### `05 — LIVE FROM GITHUB`
 
 <p align="center">
-  <img height="170" src="https://github-readme-stats.vercel.app/api?username=aryankhanna1409&show_icons=true&hide_border=true&bg_color=0b1020&title_color=67e8f9&text_color=e6edf3&icon_color=5aa2ff" alt="GitHub stats" />
-  <img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=aryankhanna1409&layout=compact&langs_count=8&hide_border=true&bg_color=0b1020&title_color=67e8f9&text_color=e6edf3" alt="Top languages" />
+  <img src="assets/contributions.svg" width="100%" alt="Contribution heatmap" />
 </p>
 
 <p align="center">
-  <img src="assets/contributions.svg" width="100%" alt="Contribution heatmap" />
+  <img src="assets/languages.svg" width="100%" alt="Language mix" />
 </p>
 
 ---
@@ -115,6 +114,6 @@ I'm a research assistant (since September 2024) working across machine learning,
 
 `SCENE 01 / IDENTITY` · Pune, IN · [LinkedIn](https://www.linkedin.com/in/aryandkhanna1)
 
-<img src="https://capsule-render.vercel.app/api?type=rect&color=06080b&height=60&section=footer" width="100%" alt="" />
+<img src="assets/footer.svg" width="100%" alt="" />
 
 </div>
