@@ -2,7 +2,8 @@
 import math, random, os
 random.seed(7)
 OUT = os.path.join(os.path.dirname(__file__), "..", "assets")
-ORANGE, INK, BG = "#ff7a2f", "#e9edf2", "#06080b"
+ORANGE, INK, BG = "#5aa2ff", "#e6edf3", "#0b1020"   # ORANGE name kept for brevity: it is now the blue accent
+CYAN, VIOLET = "#67e8f9", "#8b5cf6"
 FONT = "JetBrains Mono, ui-monospace, Menlo, Consolas, monospace"
 SWEEP = 7.0
 
@@ -38,8 +39,8 @@ tp = ang(px, py - 20) / 360 * SWEEP
 box = (f'<g opacity="0"><rect x="{px-24}" y="{py-56}" width="48" height="66" fill="none" stroke="{ORANGE}" stroke-width="1.5"/>'
        f'<text x="{px-24}" y="{py-62}" font-size="9" fill="{ORANGE}" font-family="{FONT}">PERSON 0.91</text>'
        f'<animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.03;0.7;1" dur="{SWEEP}s" begin="{tp:.2f}s" repeatCount="indefinite"/></g>')
-rings = "".join(f'<circle cx="{CX}" cy="{CY}" r="{r}" fill="none" stroke="#1b2430" stroke-width="1"/>' for r in (50, 100, 150))
-cross = f'<path d="M{CX-R} {CY}H{CX+R}M{CX} {CY-R}V{CY+R}" stroke="#141b24"/>'
+rings = "".join(f'<circle cx="{CX}" cy="{CY}" r="{r}" fill="none" stroke="#25375f" stroke-width="1"/>' for r in (50, 100, 150))
+cross = f'<path d="M{CX-R} {CY}H{CX+R}M{CX} {CY-R}V{CY+R}" stroke="#1b2a4d"/>'
 wedges = ""
 for i in range(14):                               # trailing glow, fading
     a0, a1 = -4 * (i + 1), -4 * i
@@ -48,25 +49,44 @@ for i in range(14):                               # trailing glow, fading
     wedges += f'<path d="M{CX} {CY}L{x0:.1f} {y0:.1f}A{R} {R} 0 0 1 {x1:.1f} {y1:.1f}Z" fill="{ORANGE}" opacity="{0.34*(1-i/14):.3f}"/>'
 sweep = (f'<g><animateTransform attributeName="transform" type="rotate" from="0 {CX} {CY}" to="360 {CX} {CY}" dur="{SWEEP}s" repeatCount="indefinite"/>'
          f'{wedges}<line x1="{CX}" y1="{CY}" x2="{CX+R}" y2="{CY}" stroke="{ORANGE}" stroke-width="1.6"/></g>')
-grid = "".join(f'<path d="M{x} 0V{H}" stroke="#0c1118"/>' for x in range(0, W, 40)) + "".join(f'<path d="M0 {y}H{W}" stroke="#0c1118"/>' for y in range(0, H, 40))
+grid = "".join(f'<path d="M{x} 0V{H}" stroke="#101a33"/>' for x in range(0, W, 40)) + "".join(f'<path d="M0 {y}H{W}" stroke="#101a33"/>' for y in range(0, H, 40))
 brackets = "".join(f'<path d="{d}" fill="none" stroke="{ORANGE}" stroke-width="2"/>' for d in
     ("M14 34V14H34", f"M{W-34} 14H{W-14}V34", f"M14 {H-34}V{H-14}H34", f"M{W-34} {H-14}H{W-14}V{H-34}"))
+stars = "".join(
+    f'<circle cx="{random.uniform(0,W):.0f}" cy="{random.uniform(0,H):.0f}" r="{random.choice([0.6,0.9,1.3])}" fill="{random.choice([INK,CYAN,ORANGE])}" opacity="0">'
+    f'<animate attributeName="opacity" values="0;{random.uniform(.4,.9):.2f};0" dur="{random.uniform(2.5,6):.1f}s" begin="{random.uniform(0,5):.1f}s" repeatCount="indefinite"/>'
+    f'<animateTransform attributeName="transform" type="translate" values="0 0;0 -14;0 0" dur="{random.uniform(8,16):.0f}s" repeatCount="indefinite"/></circle>' for _ in range(70))
+defs = f'''<defs>
+<filter id="glow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+<radialGradient id="bgg" cx="{CX/W:.2f}" cy="0.5" r="0.7"><stop offset="0" stop-color="#16244d"/><stop offset="0.55" stop-color="#0b1020"/><stop offset="1" stop-color="#070a14"/></radialGradient>
+<linearGradient id="nameg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#9cc4ff"/></linearGradient>
+<pattern id="scan" width="4" height="4" patternUnits="userSpaceOnUse"><rect width="4" height="1" fill="#000" opacity="0.12"/></pattern>
+</defs>'''
+glitch = lambda txt, y, dly: (
+    f'<text x="50" y="{y}" font-size="58" font-weight="800" fill="{CYAN}" opacity="0" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif" letter-spacing="1">{txt}'
+    f'<animate attributeName="opacity" values="0;0;0.7;0;0.5;0;0" keyTimes="0;0.9;0.915;0.93;0.945;0.96;1" dur="6s" begin="{dly}s" repeatCount="indefinite"/>'
+    f'<animate attributeName="x" values="50;50;44;56;47;50;50" keyTimes="0;0.9;0.915;0.93;0.945;0.96;1" dur="6s" begin="{dly}s" repeatCount="indefinite"/></text>'
+    f'<text x="50" y="{y}" font-size="58" font-weight="800" fill="{VIOLET}" opacity="0" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif" letter-spacing="1">{txt}'
+    f'<animate attributeName="opacity" values="0;0;0.7;0;0.5;0;0" keyTimes="0;0.9;0.915;0.93;0.945;0.96;1" dur="6s" begin="{dly}s" repeatCount="indefinite"/>'
+    f'<animate attributeName="x" values="50;50;57;45;53;50;50" keyTimes="0;0.9;0.915;0.93;0.945;0.96;1" dur="6s" begin="{dly}s" repeatCount="indefinite"/></text>')
+ping = f'<circle cx="{CX}" cy="{CY}" r="6" fill="none" stroke="{CYAN}" stroke-width="1.5" opacity="0"><animate attributeName="r" values="6;{R}" dur="3.5s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.7;0" dur="3.5s" repeatCount="indefinite"/></circle>'
 hero = f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W} {H}" width="100%" role="img" aria-label="Aryan Khanna: Robotics, AI, Software">
-<rect width="{W}" height="{H}" fill="{BG}"/>{grid}{brackets}
+{defs}<rect width="{W}" height="{H}" fill="url(#bgg)"/>{grid}{stars}{brackets}
 <g font-family="{FONT}">
-<text x="52" y="82" font-size="11" fill="#7d8896" letter-spacing="3">SCENE 01 / LIDAR SWEEP</text>
-<text x="50" y="152" font-size="58" font-weight="800" fill="{INK}" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" letter-spacing="1">ARYAN
+<text x="52" y="82" font-size="11" fill="#8b98b5" letter-spacing="3">SCENE 01 / LIDAR SWEEP</text>
+<text x="50" y="152" font-size="58" font-weight="800" fill="url(#nameg)" filter="url(#glow)" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" letter-spacing="1">ARYAN
 <animate attributeName="opacity" from="0" to="1" dur="0.9s" fill="freeze"/></text>
-<text x="50" y="214" font-size="58" font-weight="800" fill="{INK}" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" letter-spacing="1">KHANNA
+<text x="50" y="214" font-size="58" font-weight="800" fill="url(#nameg)" filter="url(#glow)" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" letter-spacing="1">KHANNA
 <animate attributeName="opacity" from="0" to="1" dur="0.9s" begin="0.3s" fill="freeze"/></text>
-<text x="52" y="250" font-size="15" fill="{ORANGE}" letter-spacing="4">ROBOTICS / AI / SOFTWARE</text>
-<text x="52" y="290" font-size="11" fill="#7d8896">sense → perceive → plan → act → learn</text>
+{glitch("ARYAN",152,0)}{glitch("KHANNA",214,0.2)}<text x="52" y="250" font-size="15" fill="{CYAN}" letter-spacing="4">ROBOTICS / AI / SOFTWARE<tspan fill="{ORANGE}">▌<animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite"/></tspan></text>
+<text x="52" y="290" font-size="11" fill="#8b98b5">sense → perceive → plan → act → learn</text>
 <circle cx="{W-150}" cy="40" r="4" fill="{ORANGE}"><animate attributeName="opacity" values="1;0.15;1" dur="1.6s" repeatCount="indefinite"/></circle>
 <text x="{W-140}" y="44" font-size="10" fill="{INK}" letter-spacing="2">LIVE SCAN</text>
-<text x="{CX+R}" y="{H-18}" font-size="9" fill="#7d8896" text-anchor="end">r = 12 m · 360°</text>
+<text x="{CX+R}" y="{H-18}" font-size="9" fill="#8b98b5" text-anchor="end">r = 12 m · 360°</text>
 </g>
-{rings}{cross}{dots}{pdots}{box}{sweep}
-<circle cx="{CX}" cy="{CY}" r="4" fill="{ORANGE}"/>
+<g filter="url(#glow)">{rings}{cross}{ping}{dots}{pdots}{box}{sweep}</g>
+<circle cx="{CX}" cy="{CY}" r="4" fill="{CYAN}" filter="url(#glow)"/>
+<rect width="{W}" height="{H}" fill="url(#scan)" pointer-events="none"/>
 </svg>'''
 open(f"{OUT}/hero.svg", "w").write(hero)
 
@@ -76,9 +96,9 @@ stages = [("SENSE", "LiDAR · IMU · camera"), ("PERCEIVE", "YOLO11 · RGB-therm
           ("ACT", "PID · differential drive"), ("LEARN", "RF · XGBoost · RAG")]
 xs = [96 + i * 192 for i in range(5)]
 y = 78
-line = f'<path id="rail" d="M{xs[0]} {y}H{xs[-1]}" stroke="#1b2430" stroke-width="2" stroke-dasharray="4 6"/>'
+line = f'<path id="rail" fill="none" d="M{xs[0]} {y}H{xs[-1]}" stroke="#2a3d6b" stroke-width="2" stroke-dasharray="4 6"><animate attributeName="stroke-dashoffset" from="0" to="-20" dur="1s" repeatCount="indefinite"/></path>'
 packets = "".join(
-    f'<circle r="4" fill="{ORANGE}"><animateMotion dur="6s" begin="{i*1.2}s" repeatCount="indefinite" path="M{xs[0]} {y}H{xs[-1]}"/>'
+    f'<circle r="4" fill="{CYAN}"><animateMotion dur="6s" begin="{i*1.2}s" repeatCount="indefinite" path="M{xs[0]} {y}H{xs[-1]}"/>'
     f'<animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.08;0.92;1" dur="6s" begin="{i*1.2}s" repeatCount="indefinite"/></circle>' for i in range(5))
 nodes = ""
 for i, ((n, sub), x) in enumerate(zip(stages, xs)):
@@ -87,8 +107,8 @@ for i, ((n, sub), x) in enumerate(zip(stages, xs)):
               f'<animate attributeName="opacity" values="0.6;0" dur="3s" begin="{i*0.6}s" repeatCount="indefinite"/></circle>'
               f'<text x="{x}" y="{y+5}" font-size="13" fill="{ORANGE}" text-anchor="middle" font-weight="700">0{i+1}</text>'
               f'<text x="{x}" y="{y+52}" font-size="13" fill="{INK}" text-anchor="middle" letter-spacing="2" font-weight="700">{n}</text>'
-              f'<text x="{x}" y="{y+70}" font-size="10" fill="#7d8896" text-anchor="middle">{sub}</text></g>')
+              f'<text x="{x}" y="{y+70}" font-size="10" fill="#8b98b5" text-anchor="middle">{sub}</text></g>')
 pipe = (f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {PW} {PH}" width="100%" role="img" aria-label="Sense, perceive, plan, act, learn">'
-        f'<rect width="{PW}" height="{PH}" rx="10" fill="{BG}"/><g font-family="{FONT}">{line}{packets}{nodes}</g></svg>')
+        f'<defs><filter id="glow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs><rect width="{PW}" height="{PH}" rx="10" fill="{BG}"/><g font-family="{FONT}"><g filter="url(#glow)">{line}{packets}{nodes}</g></g></svg>')
 open(f"{OUT}/pipeline.svg", "w").write(pipe)
 print("ok")

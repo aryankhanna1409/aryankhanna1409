@@ -3,7 +3,7 @@
 <img src="assets/hero.svg" width="100%" alt="Aryan Khanna: Robotics / AI / Software, with an animated LiDAR scan" />
 
 <a href="https://github.com/aryankhanna1409">
-  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=500&size=18&pause=1400&color=FF7A2F&center=true&vCenter=true&width=760&lines=I+build+intelligent+systems+that+start+on+a+robot;...and+end+in+software.;Sensing+%C2%B7+Planning+%C2%B7+Learning+%C2%B7+Data+systems" alt="Typing headline" />
+  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=500&size=18&pause=1400&color=67E8F9&center=true&vCenter=true&width=760&lines=I+build+intelligent+systems+that+start+on+a+robot;...and+end+in+software.;Sensing+%C2%B7+Planning+%C2%B7+Learning+%C2%B7+Data+systems" alt="Typing headline" />
 </a>
 
 </div>
@@ -48,18 +48,18 @@ I'm a research assistant (since September 2024) working across machine learning,
 ### `03 — ENGINEERING`
 
 <p>
-  <img src="https://img.shields.io/badge/Python-0b0f14?style=for-the-badge&logo=python&logoColor=ff7a2f" alt="Python" />
-  <img src="https://img.shields.io/badge/C++-0b0f14?style=for-the-badge&logo=cplusplus&logoColor=ff7a2f" alt="C++" />
-  <img src="https://img.shields.io/badge/ROS%202-0b0f14?style=for-the-badge&logo=ros&logoColor=ff7a2f" alt="ROS 2" />
-  <img src="https://img.shields.io/badge/PyTorch-0b0f14?style=for-the-badge&logo=pytorch&logoColor=ff7a2f" alt="PyTorch" />
-  <img src="https://img.shields.io/badge/OpenCV-0b0f14?style=for-the-badge&logo=opencv&logoColor=ff7a2f" alt="OpenCV" />
-  <img src="https://img.shields.io/badge/YOLO11-0b0f14?style=for-the-badge&logo=yolo&logoColor=ff7a2f" alt="YOLO11" />
-  <img src="https://img.shields.io/badge/Arduino-0b0f14?style=for-the-badge&logo=arduino&logoColor=ff7a2f" alt="Arduino" />
-  <img src="https://img.shields.io/badge/Jetson-0b0f14?style=for-the-badge&logo=nvidia&logoColor=ff7a2f" alt="Jetson" />
-  <img src="https://img.shields.io/badge/SQL-0b0f14?style=for-the-badge&logo=postgresql&logoColor=ff7a2f" alt="SQL" />
-  <img src="https://img.shields.io/badge/Streamlit-0b0f14?style=for-the-badge&logo=streamlit&logoColor=ff7a2f" alt="Streamlit" />
-  <img src="https://img.shields.io/badge/React-0b0f14?style=for-the-badge&logo=react&logoColor=ff7a2f" alt="React" />
-  <img src="https://img.shields.io/badge/Git-0b0f14?style=for-the-badge&logo=git&logoColor=ff7a2f" alt="Git" />
+  <img src="https://img.shields.io/badge/Python-0b1020?style=for-the-badge&logo=python&logoColor=5aa2ff" alt="Python" />
+  <img src="https://img.shields.io/badge/C++-0b1020?style=for-the-badge&logo=cplusplus&logoColor=5aa2ff" alt="C++" />
+  <img src="https://img.shields.io/badge/ROS%202-0b1020?style=for-the-badge&logo=ros&logoColor=5aa2ff" alt="ROS 2" />
+  <img src="https://img.shields.io/badge/PyTorch-0b1020?style=for-the-badge&logo=pytorch&logoColor=5aa2ff" alt="PyTorch" />
+  <img src="https://img.shields.io/badge/OpenCV-0b1020?style=for-the-badge&logo=opencv&logoColor=5aa2ff" alt="OpenCV" />
+  <img src="https://img.shields.io/badge/YOLO11-0b1020?style=for-the-badge&logo=yolo&logoColor=5aa2ff" alt="YOLO11" />
+  <img src="https://img.shields.io/badge/Arduino-0b1020?style=for-the-badge&logo=arduino&logoColor=5aa2ff" alt="Arduino" />
+  <img src="https://img.shields.io/badge/Jetson-0b1020?style=for-the-badge&logo=nvidia&logoColor=5aa2ff" alt="Jetson" />
+  <img src="https://img.shields.io/badge/SQL-0b1020?style=for-the-badge&logo=postgresql&logoColor=5aa2ff" alt="SQL" />
+  <img src="https://img.shields.io/badge/Streamlit-0b1020?style=for-the-badge&logo=streamlit&logoColor=5aa2ff" alt="Streamlit" />
+  <img src="https://img.shields.io/badge/React-0b1020?style=for-the-badge&logo=react&logoColor=5aa2ff" alt="React" />
+  <img src="https://img.shields.io/badge/Git-0b1020?style=for-the-badge&logo=git&logoColor=5aa2ff" alt="Git" />
 </p>
 
 | Robotics & control | Perception | ML & data | Software & embedded |
@@ -101,8 +101,8 @@ I'm a research assistant (since September 2024) working across machine learning,
 ### `05 — LIVE FROM GITHUB`
 
 <p align="center">
-  <img height="170" src="https://github-readme-stats.vercel.app/api?username=aryankhanna1409&show_icons=true&hide_border=true&bg_color=06080b&title_color=ff7a2f&text_color=e9edf2&icon_color=ff7a2f" alt="GitHub stats" />
-  <img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=aryankhanna1409&layout=compact&langs_count=8&hide_border=true&bg_color=06080b&title_color=ff7a2f&text_color=e9edf2" alt="Top languages" />
+  <img height="170" src="https://github-readme-stats.vercel.app/api?username=aryankhanna1409&show_icons=true&hide_border=true&bg_color=0b1020&title_color=67e8f9&text_color=e6edf3&icon_color=5aa2ff" alt="GitHub stats" />
+  <img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=aryankhanna1409&layout=compact&langs_count=8&hide_border=true&bg_color=0b1020&title_color=67e8f9&text_color=e6edf3" alt="Top languages" />
 </p>
 
 <p align="center">
