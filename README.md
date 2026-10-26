@@ -50,7 +50,7 @@ I'm finishing a **B.Tech in Robotics & Automation** at Symbiosis Institute of Te
 |---|---|---|
 | **01 · Robotics** | Sensing, kinematics, control and embedded hardware: where real systems fail at the interfaces | IoT autonomous mobile robot · IR path-following AGV design |
 | **02 · AI** | Perception and learning for physical and financial problems | Sentinel RGB-thermal rescue scanner · reward-optimisation ML (published, IJCIS 2025) |
-| **03 · Systems** | Architecture: telemetry, data models, correlation, retrieval, reporting | finintel RAG system · Aegis-Net network intelligence ([nexus-ai](https://github.com/aryankhanna1409/nexus-ai)) · CollegeOS data architecture |
+| **03 · Systems** | Architecture: telemetry, data models, correlation, retrieval, reporting | finintel RAG system · Aegis-Net network intelligence · CollegeOS data architecture |
 
 ---
 
@@ -91,62 +91,33 @@ I'm finishing a **B.Tech in Robotics & Automation** at Symbiosis Institute of Te
 
 ### `SCENE 03 — PROJECTS`
 
-<a href="https://github.com/aryankhanna1409/nexus-ai"><picture><source media="(prefers-color-scheme: light)" srcset="assets/light/banners/nexus-ai.svg" /><img src="assets/banners/nexus-ai.svg" alt="nexus-ai" width="100%" /></picture></a>
-
 <table>
   <tr><td width="50%"><a href="https://github.com/aryankhanna1409/sentinel"><picture><source media="(prefers-color-scheme: light)" srcset="assets/light/banners/sentinel.svg" /><img src="https://raw.githubusercontent.com/aryankhanna1409/sentinel/main/assets/banner.svg" alt="Sentinel" width="100%" /></picture></a></td><td width="50%"><a href="https://github.com/aryankhanna1409/autonomous-bot"><picture><source media="(prefers-color-scheme: light)" srcset="assets/light/banners/autonomous-bot.svg" /><img src="https://raw.githubusercontent.com/aryankhanna1409/autonomous-bot/main/assets/banner.svg" alt="autonomous-bot" width="100%" /></picture></a></td></tr>
   <tr><td width="50%"><a href="https://github.com/aryankhanna1409/finintel"><picture><source media="(prefers-color-scheme: light)" srcset="assets/light/banners/finintel.svg" /><img src="https://raw.githubusercontent.com/aryankhanna1409/finintel/main/assets/banner.svg" alt="finintel" width="100%" /></picture></a></td><td width="50%"><a href="https://github.com/aryankhanna1409/style-transfer-cnn"><picture><source media="(prefers-color-scheme: light)" srcset="assets/light/banners/style-transfer-cnn.svg" /><img src="https://raw.githubusercontent.com/aryankhanna1409/style-transfer-cnn/main/assets/banner.svg" alt="style-transfer-cnn" width="100%" /></picture></a></td></tr>
   <tr><td width="50%"><a href="https://github.com/aryankhanna1409/overthinkers-assistant"><picture><source media="(prefers-color-scheme: light)" srcset="assets/light/banners/overthinkers-assistant.svg" /><img src="https://raw.githubusercontent.com/aryankhanna1409/overthinkers-assistant/main/assets/banner.svg" alt="overthinkers-assistant" width="100%" /></picture></a></td><td width="50%"><a href="https://github.com/aryankhanna1409/one-click-crave"><picture><source media="(prefers-color-scheme: light)" srcset="assets/light/banners/one-click-crave.svg" /><img src="https://raw.githubusercontent.com/aryankhanna1409/one-click-crave/main/assets/banner.svg" alt="one-click-crave" width="100%" /></picture></a></td></tr>
   <tr><td width="50%"><a href="https://github.com/aryankhanna1409/auto_wordle"><picture><source media="(prefers-color-scheme: light)" srcset="assets/light/banners/auto_wordle.svg" /><img src="https://raw.githubusercontent.com/aryankhanna1409/auto_wordle/main/assets/banner.svg" alt="auto_wordle" width="100%" /></picture></a></td><td width="50%"><a href="https://github.com/aryankhanna1409/murdle"><picture><source media="(prefers-color-scheme: light)" srcset="assets/light/banners/murdle.svg" /><img src="https://raw.githubusercontent.com/aryankhanna1409/murdle/main/assets/banner.svg" alt="murdle" width="100%" /></picture></a></td></tr>
   <tr><td width="50%"><a href="https://github.com/aryankhanna1409/SnackSave"><picture><source media="(prefers-color-scheme: light)" srcset="assets/light/banners/snacksave.svg" /><img src="https://raw.githubusercontent.com/aryankhanna1409/SnackSave/main/assets/banner.svg" alt="SnackSave" width="100%" /></picture></a></td><td width="50%"><a href="https://github.com/aryankhanna1409/credit-card"><picture><source media="(prefers-color-scheme: light)" srcset="assets/light/banners/credit-card.svg" /><img src="https://raw.githubusercontent.com/aryankhanna1409/credit-card/main/assets/banner.svg" alt="credit-card" width="100%" /></picture></a></td></tr>
-  <tr><td width="50%"><a href="https://github.com/aryankhanna1409/kinematics-calculator"><picture><source media="(prefers-color-scheme: light)" srcset="assets/light/banners/kinematics-calculator.svg" /><img src="https://raw.githubusercontent.com/aryankhanna1409/kinematics-calculator/main/assets/banner.svg" alt="kinematics-calculator" width="100%" /></picture></a></td><td width="50%"><a href="https://github.com/aryankhanna1409/fakespotter"><picture><source media="(prefers-color-scheme: light)" srcset="assets/light/banners/fakespotter.svg" /><img src="https://raw.githubusercontent.com/aryankhanna1409/fakespotter/main/assets/banner.svg" alt="fakespotter" width="100%" /></picture></a></td></tr>
+  <tr><td width="50%"><a href="https://github.com/aryankhanna1409/nexus-ai"><picture><source media="(prefers-color-scheme: light)" srcset="assets/light/banners/nexus-ai.svg" /><img src="assets/banners/nexus-ai.svg" alt="nexus-ai" width="100%" /></picture></a></td><td width="50%"><a href="https://github.com/aryankhanna1409/kinematics-calculator"><picture><source media="(prefers-color-scheme: light)" srcset="assets/light/banners/kinematics-calculator.svg" /><img src="https://raw.githubusercontent.com/aryankhanna1409/kinematics-calculator/main/assets/banner.svg" alt="kinematics-calculator" width="100%" /></picture></a></td></tr>
+  <tr><td colspan="2" align="center"><a href="https://github.com/aryankhanna1409/fakespotter"><picture><source media="(prefers-color-scheme: light)" srcset="assets/light/banners/fakespotter.svg" /><img src="https://raw.githubusercontent.com/aryankhanna1409/fakespotter/main/assets/banner.svg" alt="fakespotter" width="50%" /></picture></a></td></tr>
 </table>
 
 <br>
 
 #### `IN ACTION`
 
-<sub>Real runs, recorded from each repo's own code. Click any one to open the project.</sub>
-
 <table align="center">
   <tr>
-    <td align="center" colspan="2"><a href="https://github.com/aryankhanna1409/nexus-ai"><img src="https://raw.githubusercontent.com/aryankhanna1409/nexus-ai/main/assets/report.png" width="80%" alt="nexus-ai incident report" /></a><br><sub><b>nexus-ai</b> · the incident report <code>make demo</code> writes: before/after KPIs around the agent's rollback</sub></td>
-  </tr>
-  <tr>
     <td align="center" width="50%"><a href="https://github.com/aryankhanna1409/sentinel"><img src="https://raw.githubusercontent.com/aryankhanna1409/sentinel/main/assets/demo.gif" alt="Sentinel HUD demo" /></a><br><sub><b>Sentinel</b> · RGB → NIR → thermal targeting HUD</sub></td>
-    <td align="center" width="50%"><a href="https://github.com/aryankhanna1409/sentinel"><img src="https://raw.githubusercontent.com/aryankhanna1409/sentinel/main/assets/command_demo.gif" alt="Sentinel Command demo" /></a><br><sub><b>Sentinel Command</b> · tracking, heatmap, radar and the tri-spectral wall</sub></td>
-  </tr>
-  <tr>
     <td align="center" width="50%"><a href="https://github.com/aryankhanna1409/finintel"><img src="https://raw.githubusercontent.com/aryankhanna1409/finintel/main/assets/demo.gif" alt="finintel demo" /></a><br><sub><b>finintel</b> · grounded, citation-backed reports</sub></td>
-    <td align="center" width="50%"><a href="https://github.com/aryankhanna1409/overthinkers-assistant"><img src="https://raw.githubusercontent.com/aryankhanna1409/overthinkers-assistant/main/assets/demo.gif" alt="Overthinker's Assistant demo" /></a><br><sub><b>Overthinker's Assistant</b> · decision trees from a sentence</sub></td>
   </tr>
   <tr>
+    <td align="center" width="50%"><a href="https://github.com/aryankhanna1409/overthinkers-assistant"><img src="https://raw.githubusercontent.com/aryankhanna1409/overthinkers-assistant/main/assets/demo.gif" alt="Overthinker's Assistant demo" /></a><br><sub><b>Overthinker's Assistant</b> · decision trees from a sentence</sub></td>
     <td align="center" width="50%"><a href="https://github.com/aryankhanna1409/one-click-crave"><img src="https://raw.githubusercontent.com/aryankhanna1409/one-click-crave/main/assets/demo.gif" alt="One Click Crave demo" /></a><br><sub><b>One Click Crave</b> · meal picker that learns your habits</sub></td>
-    <td align="center" width="50%"><a href="https://github.com/aryankhanna1409/kinematics-calculator"><img src="https://raw.githubusercontent.com/aryankhanna1409/kinematics-calculator/main/assets/demo.gif" alt="Kinematics Calculator demo" /></a><br><sub><b>Kinematics Calculator</b> · forward and inverse kinematics, animated in 3D</sub></td>
+  </tr>
+  <tr>
+    <td align="center" colspan="2"><a href="https://github.com/aryankhanna1409/kinematics-calculator"><img src="https://raw.githubusercontent.com/aryankhanna1409/kinematics-calculator/main/assets/demo.gif" width="50%" alt="Kinematics Calculator demo" /></a><br><sub><b>Kinematics Calculator</b> · forward and inverse kinematics, animated in 3D</sub></td>
   </tr>
 </table>
-
-<br>
-
-#### `EVERY REPO · ONE COMMAND AWAY`
-
-<sub>What each one does and how to see it run. ▶ means there's a recording above; setup notes are in each repo's README.</sub>
-
-| Repo | What it does | Stack | Try it |
-|---|---|---|---|
-| [**nexus-ai**](https://github.com/aryankhanna1409/nexus-ai) ▶ | A simulated telecom outage end to end: C library reads the call logs, anomaly detection finds the incident, Claude names the root cause with cited evidence, and an agent rolls back only after you approve | C · Python · Claude | `make demo` (runs offline) |
-| [**sentinel**](https://github.com/aryankhanna1409/sentinel) ▶ | Occlusion-aware person detection for search and rescue, with RGB, simulated NIR and simulated thermal views | YOLO11 · ONNX · OpenCV | `python sentinel_command.py` |
-| [**autonomous-bot**](https://github.com/aryankhanna1409/autonomous-bot) | ROS 2 differential-drive robot: ESKF localization, SLAM, Nav2, an MQTT-fed IoT dashboard and a swarm auction on OpenRMF | ROS 2 · Nav2 · Flask | `colcon build` in a ROS 2 workspace |
-| [**finintel**](https://github.com/aryankhanna1409/finintel) ▶ | SEC filings to a grounded advisory report: hybrid RAG with citation lineage, a knowledge graph and a Claude agent | Python · Pydantic · NetworkX | `finintel report TGT --peers WMT COST DG KR` |
-| [**credit-card**](https://github.com/aryankhanna1409/credit-card) | Notebooks behind the published reward-personalisation research: segmentation and reward-point models on synthetic data | scikit-learn · XGBoost | `jupyter notebook` |
-| [**style-transfer-cnn**](https://github.com/aryankhanna1409/style-transfer-cnn) | Neural style transfer on a frozen VGG-19, with a CLI and a local browser UI | PyTorch · Gradio | `style-transfer-ui` |
-| [**kinematics-calculator**](https://github.com/aryankhanna1409/kinematics-calculator) ▶ | Forward and inverse kinematics for 1 to 6 DOF arms, 3D animation, and a PPO agent that learns to reach | NumPy · Matplotlib · SB3 | `jupyter notebook kinematics_calculator.ipynb` |
-| [**overthinkers-assistant**](https://github.com/aryankhanna1409/overthinkers-assistant) ▶ | Type a decision, get pros, cons, sarcasm and a Graphviz decision tree | Flask · Graphviz · markovify | `python app.py` |
-| [**one-click-crave**](https://github.com/aryankhanna1409/one-click-crave) ▶ | "What should I eat?" in one click, with dietary filters and a model trained on your order history | Streamlit · scikit-learn | `streamlit run app.py` |
-| [**fakespotter**](https://github.com/aryankhanna1409/fakespotter) | Scores the sentiment of Reddit threads about counterfeit goods with DistilBERT and saves a CSV | PRAW · Transformers | `python fakespotter/fakespotter.py` |
-| [**auto_wordle**](https://github.com/aryankhanna1409/auto_wordle) | Opens today's Wordle in a real browser, reads the tiles and solves it | Playwright · Python | `python wordle_bot.py` |
-| [**murdle**](https://github.com/aryankhanna1409/murdle) | A terminal whodunit where a smug AI assistant drip-feeds clues | Python · OpenAI | `python game.py` |
-| [**SnackSave**](https://github.com/aryankhanna1409/SnackSave) | Android app that nudges you when you're within 100 m of a café (early prototype) | Kotlin · Compose | open in Android Studio |
 
 <br>
 
@@ -170,11 +141,11 @@ I'm finishing a **B.Tech in Robotics & Automation** at Symbiosis Institute of Te
 
 ### `SCENE 04 — SYSTEMS & CASE STUDIES`
 
-<sub>The research behind some of the repos above, plus coursework and builds that aren't public.</sub>
+<sub>The research behind some of the repos above, plus coursework and private builds that aren't public.</sub>
 
 | Project | What it is | Stack |
 |---|---|---|
-| **Aegis-Net** <br><sub>flagship · systems</sub> | Network intelligence and autonomous DevSecOps: telemetry → C analytics engine → anomaly detection → correlation / root cause → LLM explanation → recommended action → dashboard. Slim, runnable rebuild: [nexus-ai](https://github.com/aryankhanna1409/nexus-ai) | C · Python · LLM · telemetry |
+| **Aegis-Net** <br><sub>flagship · systems</sub> | Network intelligence and autonomous DevSecOps: telemetry → C analytics engine → anomaly detection → correlation / root cause → LLM explanation → recommended action → dashboard | C · Python · LLM · telemetry |
 | **IoT Autonomous Mobile Robot** <br><sub>robotics · research</sub> | Research robot that takes tasks over IoT and allocates them autonomously, framed for warehouse and hospital-logistics use. Public ROS 2 side: [autonomous-bot](https://github.com/aryankhanna1409/autonomous-bot) | Embedded · IoT · task allocation |
 | **Sentinel** <br><sub>computer vision · research</sub> | RGB + thermal fusion so people are easier to find in the dark. Code: [sentinel](https://github.com/aryankhanna1409/sentinel) | YOLO11 · OpenCV · thermal |
 | **Credit-card reward optimisation** <br><sub>applied ML · published</sub> | Segment spenders, then personalise rewards. Notebooks: [credit-card](https://github.com/aryankhanna1409/credit-card) | Random Forest · XGBoost · K-Means |
