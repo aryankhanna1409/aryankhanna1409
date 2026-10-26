@@ -34,7 +34,10 @@ def main():
     n = 0
     for path in glob.glob(os.path.join(ROOT, "*.svg")):
         open(os.path.join(LIGHT, os.path.basename(path)), "w").write(lighten(open(path).read())); n += 1
-    from build_banners import MOTIFS, banner
+    from build_banners import LOCAL, MOTIFS, banner
+    os.makedirs(os.path.join(ROOT, "banners"), exist_ok=True)
+    for repo in LOCAL:
+        open(os.path.join(ROOT, "banners", f"{repo}.svg"), "w").write(banner(repo)); n += 1
     for repo in MOTIFS:
         open(os.path.join(LIGHT, "banners", f"{repo}.svg"), "w").write(lighten(banner(repo))); n += 1
     print("light svgs", n)

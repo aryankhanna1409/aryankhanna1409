@@ -103,7 +103,19 @@ def m_card():
     o += f'<g><animateTransform attributeName="transform" type="rotate" values="-3 180 110;3 180 110;-3 180 110" dur="6s" repeatCount="indefinite"/><rect x="40" y="25" width="280" height="170" rx="18" fill="url(#cg)" stroke="{BLUE}"/><rect x="62" y="62" width="44" height="32" rx="6" fill="{CYAN}" opacity=".85"/><text x="62" y="140" font-size="17" fill="{INK}" letter-spacing="3">4000 •••• •••• 2026</text><text x="62" y="172" font-size="10" fill="{MUTED}">REWARD POINTS</text>'
     o += f'<g clip-path="url(#cc)"><rect x="-80" y="25" width="80" height="170" fill="url(#sh)" transform="skewX(-20)"><animate attributeName="x" values="-80;420" dur="3.2s" repeatCount="indefinite"/></rect></g></g>'
     return o
+def m_nexus():
+    o = f'<rect x="0" y="10" width="360" height="200" rx="10" fill="#101a33"/>'
+    o += "".join(f'<path d="M20 {y}H340" stroke="#1b2a4d"/>' for y in (50, 100, 150, 190))
+    o += f'<path d="M150 30V195" stroke="#fbbf24" stroke-opacity=".6" stroke-dasharray="3 4"/><text x="150" y="25" font-size="8" fill="#fbbf24" text-anchor="middle">DEPLOY 2.4.1</text>'
+    o += f'<path d="M262 30V195" stroke="{GREEN}" stroke-opacity=".6" stroke-dasharray="3 4"/><text x="262" y="25" font-size="8" fill="{GREEN}" text-anchor="middle">ROLLBACK</text>'
+    draw = lambda d, col, b: f'<path d="{d}" fill="none" stroke="{col}" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="320" stroke-dashoffset="320"><animate attributeName="stroke-dashoffset" values="320;0;0;320" keyTimes="0;.3;.9;1" dur="8s" begin="{b}s" repeatCount="indefinite"/></path>'
+    o += draw("M20 180 L60 178 L100 181 L150 179 C175 175 200 110 230 70 L262 62", RED, 0)
+    o += draw("M262 62 C272 120 282 176 300 179 L340 180", GREEN, 2.4)
+    o += f'<g opacity="0"><rect x="196" y="120" width="110" height="34" rx="8" fill="{BG}" stroke="{CYAN}"/><text x="251" y="134" font-size="9" fill="{INK}" text-anchor="middle">roll back pgw-1?</text><text x="251" y="147" font-size="9" fill="{CYAN}" text-anchor="middle">[y/N] y</text>{an("opacity","0;0;1;1;0;0",8,0,"keyTimes=\"0;.22;.25;.32;.35;1\"")}</g>'
+    o += f'<g opacity="0"><rect x="186" y="48" width="34" height="18" rx="9" fill="none" stroke="{VIOLET}"/><text x="203" y="60" font-size="9" fill="{VIOLET}" text-anchor="middle">E3</text>{an("opacity","0;0;1;1;0",8,0,"keyTimes=\"0;.18;.22;.88;1\"")}</g>'
+    return o
 MOTIFS = {
+ "nexus-ai": ("nexus-ai", "Call logs in C, Claude RCA with cited evidence, gated fixes", ["C11", "Claude", "KPI anomalies", "approval gate"], m_nexus),
  "sentinel": ("Sentinel", "Occlusion-aware human detection for search and rescue", ["YOLO11", "ONNX", "OpenCV", "RGB · NIR · Thermal"], m_sentinel),
  "autonomous-bot": ("autonomous-bot", "ROS 2 robot: SLAM, Nav2, an IoT dashboard and a swarm auction", ["ROS 2", "Nav2", "ESKF", "OpenRMF"], m_bot),
  "finintel": ("finintel", "Financial RAG: filings to grounded, citation-backed advice", ["Hybrid RAG", "GraphRAG", "Claude agent", "Pydantic"], m_finintel),
@@ -117,6 +129,8 @@ MOTIFS = {
  "snacksave": ("SnackSave", "An Android app that stops the unnecessary coffee", ["Kotlin", "Compose"], m_snack),
  "credit-card": ("credit-card", "Spending-habit segmentation and reward modelling", ["scikit-learn", "Jupyter", "RF · XGBoost"], m_card),
 }
+LOCAL = {"nexus-ai"}  # banners served from this repo (assets/banners/) instead of the project repo
+
 def banner(repo):
     title, tag, chips, motif = MOTIFS[repo]; random.seed(hash(repo) % 999)
     stars = "".join(f'<circle cx="{random.uniform(0,W):.0f}" cy="{random.uniform(0,H):.0f}" r="{random.choice([.6,.9,1.3])}" fill="{random.choice([INK,CYAN,BLUE])}" opacity="0">{an("opacity",f"0;{random.uniform(.4,.9):.2f};0",random.uniform(2.5,6),random.uniform(0,5))}</circle>' for _ in range(55))
