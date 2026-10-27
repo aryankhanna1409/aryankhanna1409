@@ -114,7 +114,20 @@ def m_nexus():
     o += f'<g opacity="0"><rect x="196" y="120" width="110" height="34" rx="8" fill="{BG}" stroke="{CYAN}"/><text x="251" y="134" font-size="9" fill="{INK}" text-anchor="middle">roll back pgw-1?</text><text x="251" y="147" font-size="9" fill="{CYAN}" text-anchor="middle">[y/N] y</text>{an("opacity","0;0;1;1;0;0",8,0,"keyTimes=\"0;.22;.25;.32;.35;1\"")}</g>'
     o += f'<g opacity="0"><rect x="186" y="48" width="34" height="18" rx="9" fill="none" stroke="{VIOLET}"/><text x="203" y="60" font-size="9" fill="{VIOLET}" text-anchor="middle">E3</text>{an("opacity","0;0;1;1;0",8,0,"keyTimes=\"0;.18;.22;.88;1\"")}</g>'
     return o
-MOTIFS = {
+def m_dish():
+    o = f'<path d="M78 40V28H96M264 28H282V40M282 182V194H264M96 194H78V182" fill="none" stroke="{CYAN}" stroke-width="2"/>'
+    o += f'<line x1="84" x2="276" y1="40" y2="40" stroke="{CYAN}" stroke-opacity=".7"><animate attributeName="y1" values="40;188;40" dur="4s" repeatCount="indefinite"/><animate attributeName="y2" values="40;188;40" dur="4s" repeatCount="indefinite"/></line>'
+    for i, x in enumerate((150, 180, 210)):
+        o += f'<path d="M{x} 104c-8-10 8-16 0-26s8-16 0-24" fill="none" stroke="{MUTED}" stroke-width="2" stroke-linecap="round" opacity="0">{an("opacity","0;.8;0",3,i*.7)}<animateTransform attributeName="transform" type="translate" values="0 6;0 -6" dur="3s" begin="{i*.7}s" repeatCount="indefinite"/></path>'
+    o += f'<path d="M96 118A84 62 0 0 0 264 118Z" fill="#16244d" stroke="{BLUE}" stroke-width="2"/><ellipse cx="180" cy="118" rx="84" ry="12" fill="#101a33" stroke="{BLUE}" stroke-width="2"/>'
+    o += "".join(f'<path d="M{118+k*14} 118q4 -6 8 0t8 0" fill="none" stroke="{CYAN}" stroke-width="1.6"/>' for k in range(9))
+    o += f'<rect x="150" y="176" width="60" height="8" rx="4" fill="{DIM}"/>'
+    for i, (t, y, c) in enumerate([("khao soi · 0.86", 46, CYAN), ("gluten · egg · fish?", 72, VIOLET), ("umami 4 · spicy 3", 98, BLUE)]):
+        w = 18 + len(t) * 6.4
+        kt = f'keyTimes="0;{.15+i*.12:.2f};{.2+i*.12:.2f};.9;1"'
+        o += f'<g opacity="0"><rect x="{350-w:.0f}" y="{y-14}" width="{w:.0f}" height="20" rx="10" fill="{BG}" stroke="{c}"/><text x="{350-w/2:.0f}" y="{y}" font-size="9.5" fill="{INK}" text-anchor="middle">{t}</text>{an("opacity","0;0;1;1;0",6,0,kt)}</g>'
+    return o
+MOTIFS = { "dishdecoded": ("DishDecoded", "Snap a dish or menu: what it is and how to make it", ["Next.js", "TypeScript", "Claude vision", "Zod"], m_dish),
  "nexus-ai": ("nexus-ai", "Call logs in C, Claude RCA with cited evidence, gated fixes", ["C11", "Claude", "KPI anomalies", "approval gate"], m_nexus),
  "sentinel": ("Sentinel", "Occlusion-aware human detection for search and rescue", ["YOLO11", "ONNX", "OpenCV", "RGB · NIR · Thermal"], m_sentinel),
  "autonomous-bot": ("autonomous-bot", "ROS 2 robot: SLAM, Nav2, an IoT dashboard and a swarm auction", ["ROS 2", "Nav2", "ESKF", "OpenRMF"], m_bot),

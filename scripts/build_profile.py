@@ -57,7 +57,7 @@ for k, (amp, dur, op) in enumerate([(18, 9, .25), (14, 7, .4), (10, 5, .7)]):
 open(f"{OUT}/footer.svg", "w").write(f + "</svg>")
 
 # ---------- languages ----------
-REPOS = ["nexus-ai", "sentinel", "autonomous-bot", "finintel", "style-transfer-cnn", "overthinkers-assistant", "one-click-crave", "kinematics-calculator",
+REPOS = ["dishdecoded", "nexus-ai", "sentinel", "autonomous-bot", "finintel", "style-transfer-cnn", "overthinkers-assistant", "one-click-crave", "kinematics-calculator",
          "fakespotter", "auto_wordle", "murdle", "SnackSave", "credit-card"]
 def langs():
     tot = {}
@@ -71,7 +71,7 @@ def langs():
             if k != 'Jupyter Notebook': tot[k] = tot.get(k, 0) + v   # notebook bytes are mostly embedded outputs
     return tot
 data = langs()
-COL = {"Python": "#5aa2ff", "Jupyter Notebook": "#8b5cf6", "C++": "#67e8f9", "C": "#34d399", "Kotlin": "#a78bfa", "JavaScript": "#fbbf24", "HTML": "#f472b6", "CMake": "#34d399", "CSS": "#60a5fa", "Shell": "#4ade80"}
+COL = {"Python": "#5aa2ff", "Jupyter Notebook": "#8b5cf6", "C++": "#67e8f9", "C": "#34d399", "Kotlin": "#a78bfa", "JavaScript": "#fbbf24", "HTML": "#f472b6", "CMake": "#34d399", "CSS": "#60a5fa", "Shell": "#4ade80", "TypeScript": "#38bdf8"}
 if data:
     top = sorted(data.items(), key=lambda kv: -kv[1])[:7]; total = sum(v for _, v in top)
     LW, LH = 960, 150 + 0; x = 24; bars = ""; leg = ""
