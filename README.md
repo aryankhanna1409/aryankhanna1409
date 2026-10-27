@@ -107,8 +107,12 @@ I'm finishing a **B.Tech in Robotics & Automation** at Symbiosis Institute of Te
 
 <table align="center">
   <tr>
-    <td align="center" width="50%"><a href="https://github.com/aryankhanna1409/sentinel"><img src="https://raw.githubusercontent.com/aryankhanna1409/sentinel/main/assets/demo.gif" alt="Sentinel HUD demo" /></a><br><sub><b>Sentinel</b> · RGB → NIR → thermal targeting HUD</sub></td>
+    <td align="center" width="50%"><a href="https://github.com/aryankhanna1409/dishdecoded"><img src="https://raw.githubusercontent.com/aryankhanna1409/dishdecoded/main/assets/demo.gif" alt="DishDecoded demo" /></a><br><sub><b>DishDecoded</b> · snap a dish or menu, get its story and recipe</sub></td>
     <td align="center" width="50%"><a href="https://github.com/aryankhanna1409/finintel"><img src="https://raw.githubusercontent.com/aryankhanna1409/finintel/main/assets/demo.gif" alt="finintel demo" /></a><br><sub><b>finintel</b> · grounded, citation-backed reports</sub></td>
+  </tr>
+  <tr>
+    <td align="center" width="50%"><a href="https://github.com/aryankhanna1409/sentinel"><img src="https://raw.githubusercontent.com/aryankhanna1409/sentinel/main/assets/demo.gif" alt="Sentinel HUD demo" /></a><br><sub><b>Sentinel</b> · RGB → NIR → thermal targeting HUD</sub></td>
+    <td align="center" width="50%"><a href="https://github.com/aryankhanna1409/sentinel"><img src="https://raw.githubusercontent.com/aryankhanna1409/sentinel/main/assets/command_demo.gif" alt="Sentinel Command demo" /></a><br><sub><b>Sentinel Command</b> · tracking, heatmap, radar and the tri-spectral wall</sub></td>
   </tr>
   <tr>
     <td align="center" width="50%"><a href="https://github.com/aryankhanna1409/overthinkers-assistant"><img src="https://raw.githubusercontent.com/aryankhanna1409/overthinkers-assistant/main/assets/demo.gif" alt="Overthinker's Assistant demo" /></a><br><sub><b>Overthinker's Assistant</b> · decision trees from a sentence</sub></td>
