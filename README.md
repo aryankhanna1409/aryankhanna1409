@@ -107,19 +107,20 @@ I'm finishing a **B.Tech in Robotics & Automation** at Symbiosis Institute of Te
 
 <table align="center">
   <tr>
-    <td align="center" width="50%"><a href="https://github.com/aryankhanna1409/dishdecoded"><img src="https://raw.githubusercontent.com/aryankhanna1409/dishdecoded/main/assets/demo.gif" alt="DishDecoded demo" /></a><br><sub><b>DishDecoded</b> · snap a dish or menu, get its story and recipe</sub></td>
-    <td align="center" width="50%"><a href="https://github.com/aryankhanna1409/finintel"><img src="https://raw.githubusercontent.com/aryankhanna1409/finintel/main/assets/demo.gif" alt="finintel demo" /></a><br><sub><b>finintel</b> · grounded, citation-backed reports</sub></td>
+    <td align="center" width="50%"><a href="https://github.com/aryankhanna1409/dishdecoded"><img src="assets/demos/dishdecoded.gif" alt="DishDecoded demo" /></a><br><sub><b>DishDecoded</b> · snap a dish or menu, get its story and recipe</sub></td>
+    <td align="center" width="50%"><a href="https://github.com/aryankhanna1409/nexus-ai"><img src="assets/demos/nexus-ai.gif" alt="nexus-ai demo" /></a><br><sub><b>nexus-ai</b> · outage to cited root cause to approved rollback</sub></td>
   </tr>
   <tr>
     <td align="center" width="50%"><a href="https://github.com/aryankhanna1409/sentinel"><img src="https://raw.githubusercontent.com/aryankhanna1409/sentinel/main/assets/demo.gif" alt="Sentinel HUD demo" /></a><br><sub><b>Sentinel</b> · RGB → NIR → thermal targeting HUD</sub></td>
     <td align="center" width="50%"><a href="https://github.com/aryankhanna1409/sentinel"><img src="https://raw.githubusercontent.com/aryankhanna1409/sentinel/main/assets/command_demo.gif" alt="Sentinel Command demo" /></a><br><sub><b>Sentinel Command</b> · tracking, heatmap, radar and the tri-spectral wall</sub></td>
   </tr>
   <tr>
+    <td align="center" width="50%"><a href="https://github.com/aryankhanna1409/finintel"><img src="https://raw.githubusercontent.com/aryankhanna1409/finintel/main/assets/demo.gif" alt="finintel demo" /></a><br><sub><b>finintel</b> · grounded, citation-backed reports</sub></td>
     <td align="center" width="50%"><a href="https://github.com/aryankhanna1409/overthinkers-assistant"><img src="https://raw.githubusercontent.com/aryankhanna1409/overthinkers-assistant/main/assets/demo.gif" alt="Overthinker's Assistant demo" /></a><br><sub><b>Overthinker's Assistant</b> · decision trees from a sentence</sub></td>
-    <td align="center" width="50%"><a href="https://github.com/aryankhanna1409/one-click-crave"><img src="https://raw.githubusercontent.com/aryankhanna1409/one-click-crave/main/assets/demo.gif" alt="One Click Crave demo" /></a><br><sub><b>One Click Crave</b> · meal picker that learns your habits</sub></td>
   </tr>
   <tr>
-    <td align="center" colspan="2"><a href="https://github.com/aryankhanna1409/kinematics-calculator"><img src="https://raw.githubusercontent.com/aryankhanna1409/kinematics-calculator/main/assets/demo.gif" width="50%" alt="Kinematics Calculator demo" /></a><br><sub><b>Kinematics Calculator</b> · forward and inverse kinematics, animated in 3D</sub></td>
+    <td align="center" width="50%"><a href="https://github.com/aryankhanna1409/one-click-crave"><img src="https://raw.githubusercontent.com/aryankhanna1409/one-click-crave/main/assets/demo.gif" alt="One Click Crave demo" /></a><br><sub><b>One Click Crave</b> · meal picker that learns your habits</sub></td>
+    <td align="center" width="50%"><a href="https://github.com/aryankhanna1409/kinematics-calculator"><img src="https://raw.githubusercontent.com/aryankhanna1409/kinematics-calculator/main/assets/demo.gif" alt="Kinematics Calculator demo" /></a><br><sub><b>Kinematics Calculator</b> · forward and inverse kinematics, animated in 3D</sub></td>
   </tr>
 </table>
 
