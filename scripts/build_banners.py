@@ -127,7 +127,26 @@ def m_dish():
         kt = f'keyTimes="0;{.15+i*.12:.2f};{.2+i*.12:.2f};.9;1"'
         o += f'<g opacity="0"><rect x="{350-w:.0f}" y="{y-14}" width="{w:.0f}" height="20" rx="10" fill="{BG}" stroke="{c}"/><text x="{350-w/2:.0f}" y="{y}" font-size="9.5" fill="{INK}" text-anchor="middle">{t}</text>{an("opacity","0;0;1;1;0",6,0,kt)}</g>'
     return o
+def m_og():
+    pts = [(180, 24), (282, 78), (244, 142), (116, 142), (78, 78)]
+    labels = ["OBSERVE", "ANALYZE", "ACT", "VERIFY", "CLOSE"]
+    loop = "M" + " L".join(f"{x} {y}" for x, y in pts) + " Z"
+    o = f'<path d="{loop}" fill="none" stroke="{DIM}" stroke-width="1.5"/>'
+    o += f'<path d="{loop}" fill="none" stroke="{BLUE}" stroke-width="2" stroke-dasharray="8 8"><animate attributeName="stroke-dashoffset" from="0" to="-32" dur="1.4s" repeatCount="indefinite"/></path>'
+    for i, ((x, y), t) in enumerate(zip(pts, labels)):
+        c = "#fbbf24" if t == "ACT" else (GREEN if t == "CLOSE" else BLUE)
+        o += f'<circle cx="{x}" cy="{y}" r="15" fill="{BG}" stroke="{c}" stroke-width="2">{an("r", "15;18;15;15", 8, i * 1.6, "keyTimes=\"0;.06;.12;1\"")}</circle>'
+        o += f'<text x="{x}" y="{y + (-21 if y < 100 else 30)}" font-size="9" fill="{MUTED}" text-anchor="middle" letter-spacing="1">{t}</text>'
+    o += f'<g><animateMotion dur="8s" repeatCount="indefinite" path="{loop}"/><circle r="5" fill="{CYAN}"/></g>'
+    o += f'<text x="180" y="84" font-size="10" fill="{INK}" text-anchor="middle">INC-2026-001</text><text x="180" y="100" font-size="9" fill="{CYAN}" text-anchor="middle">RCA 85% · 12 tool calls</text>'
+    o += f'<g opacity="0"><rect x="262" y="100" width="92" height="20" rx="10" fill="{BG}" stroke="#fbbf24"/><text x="308" y="114" font-size="9" fill="#fbbf24" text-anchor="middle">approval gate</text>{an("opacity", "0;0;1;1;0;0", 8, 0, "keyTimes=\"0;.38;.42;.55;.58;1\"")}</g>'
+    for k in range(6):
+        x = 42 + k * 48
+        o += f'<g opacity="0"><rect x="{x}" y="190" width="34" height="16" rx="3" fill="#16244d" stroke="{VIOLET}"/><text x="{x + 17}" y="201" font-size="8" fill="{INK}" text-anchor="middle">#{k + 1}</text>{an("opacity", "0;0;1;1;0", 8, 0, f"keyTimes=\"0;{.1 + k * .12:.2f};{.12 + k * .12:.2f};.95;1\"")}</g>'
+        if k: o += f'<path d="M{x - 14} 198H{x}" stroke="{VIOLET}" stroke-opacity=".7"/>'
+    return o
 MOTIFS = { "dishdecoded": ("DishDecoded", "Snap a dish or menu: what it is and how to make it", ["Next.js", "TypeScript", "Claude vision", "Zod"], m_dish),
+ "nexus-og": ("nexus-og", "The full original: C analytics, AI RCA, a gated agent", ["C11", "FastAPI", "React", "hash-chained audit"], m_og),
  "nexus-ai": ("nexus-ai", "Call logs in C, Claude RCA with cited evidence, gated fixes", ["C11", "Claude", "KPI anomalies", "approval gate"], m_nexus),
  "sentinel": ("Sentinel", "Occlusion-aware human detection for search and rescue", ["YOLO11", "ONNX", "OpenCV", "RGB · NIR · Thermal"], m_sentinel),
  "autonomous-bot": ("autonomous-bot", "ROS 2 robot: SLAM, Nav2, an IoT dashboard and a swarm auction", ["ROS 2", "Nav2", "ESKF", "OpenRMF"], m_bot),
@@ -142,7 +161,7 @@ MOTIFS = { "dishdecoded": ("DishDecoded", "Snap a dish or menu: what it is and h
  "snacksave": ("SnackSave", "An Android app that stops the unnecessary coffee", ["Kotlin", "Compose"], m_snack),
  "credit-card": ("credit-card", "Spending-habit segmentation and reward modelling", ["scikit-learn", "Jupyter", "RF · XGBoost"], m_card),
 }
-LOCAL = {"nexus-ai"}  # banners served from this repo (assets/banners/) instead of the project repo
+LOCAL = {"nexus-ai", "nexus-og"}  # banners served from this repo (assets/banners/) instead of the project repo
 
 def banner(repo):
     title, tag, chips, motif = MOTIFS[repo]; random.seed(hash(repo) % 999)
