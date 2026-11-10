@@ -1,8 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 46" width="100%" role="img" aria-label="Email" shape-rendering="crispEdges" font-family="Geneva, Monaco, 'Courier New', Courier, monospace"><defs>
-<pattern id="dither" width="4" height="4" patternUnits="userSpaceOnUse">
-<rect width="4" height="4" fill="#fff"/><rect width="2" height="2" fill="#000"/><rect x="2" y="2" width="2" height="2" fill="#000"/></pattern>
-<pattern id="stripes" width="4" height="4" patternUnits="userSpaceOnUse">
-<rect width="4" height="4" fill="#fff"/><rect y="1" width="4" height="1" fill="#000"/></pattern>
-<pattern id="gray" width="2" height="2" patternUnits="userSpaceOnUse">
-<rect width="2" height="2" fill="#fff"/><rect width="1" height="1" fill="#000"/></pattern>
+<pattern id="dither" width="4" height="4" patternUnits="userSpaceOnUse"><rect width="4" height="4" fill="#fff"/><rect width="2" height="2" fill="#000"/><rect x="2" y="2" width="2" height="2" fill="#000"/></pattern>
+<pattern id="light" width="4" height="4" patternUnits="userSpaceOnUse"><rect width="4" height="4" fill="#fff"/><rect width="1" height="1" fill="#000"/><rect x="2" y="2" width="1" height="1" fill="#000"/></pattern>
+<pattern id="stripes" width="4" height="4" patternUnits="userSpaceOnUse"><rect width="4" height="4" fill="#fff"/><rect y="1" width="4" height="1" fill="#000"/></pattern>
+<pattern id="gray" width="2" height="2" patternUnits="userSpaceOnUse"><rect width="2" height="2" fill="#fff"/><rect width="1" height="1" fill="#000"/></pattern>
 </defs><rect x="3" y="3" width="195" height="41" rx="10" fill="#000"/><rect x="1" y="1" width="195" height="41" rx="10" fill="#fff" stroke="#000" stroke-width="2"/><rect x="5" y="5" width="187" height="33" rx="7" fill="none" stroke="#000" stroke-width="2"><animate attributeName="stroke-dasharray" values="0 0;6 4;0 0" dur="3s" repeatCount="indefinite"/></rect><text x="98.0" y="28" font-size="15" font-weight="bold" text-anchor="middle" fill="#000">Email</text></svg>
