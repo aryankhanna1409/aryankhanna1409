@@ -53,14 +53,13 @@ The through-line is systems. A robot is a sensing-and-decision pipeline, and a m
 
 | | Project | What it is |
 |---|---|---|
-| 💾 | [**Sentinel**](https://github.com/aryankhanna1409/sentinel) | RGB + thermal fusion with YOLO11 so people are easier to find in the dark |
+| 💾 | [**Sentinel**](https://github.com/aryankhanna1409/sentinel) | RGB + thermal fusion with YOLO11 so people are easier to find in the dark, plus an experimental style-transfer module for synthesising weather |
 | 💾 | [**autonomous-bot**](https://github.com/aryankhanna1409/autonomous-bot) | ROS 2 stack for an IoT autonomous mobile robot and swarm task allocation |
 | 💾 | [**finintel**](https://github.com/aryankhanna1409/finintel) | RAG system that writes grounded, citation-backed financial reports |
 | 💾 | [**nexus**](https://github.com/aryankhanna1409/nexus) | Outage to cited root cause to approved rollback |
 | 💾 | [**DishDecoded**](https://github.com/aryankhanna1409/dishdecoded) | Snap a dish or menu, get its story and recipe |
 | 💾 | [**credit-card**](https://github.com/aryankhanna1409/credit-card) | Spending-habit segmentation and reward personalisation (published) |
 | 💾 | [**kinematics-calculator**](https://github.com/aryankhanna1409/kinematics-calculator) | Forward and inverse kinematics, animated in 3D |
-| 💾 | [**style-transfer-cnn**](https://github.com/aryankhanna1409/style-transfer-cnn) | Neural style transfer, packaged as a CLI with tests |
 
 <table align="center">
   <tr>
