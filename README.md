@@ -56,7 +56,7 @@ The through-line is systems. A robot is a sensing-and-decision pipeline, and a m
 | 💾 | [**Sentinel**](https://github.com/aryankhanna1409/sentinel) | RGB + thermal fusion with YOLO11 so people are easier to find in the dark, plus an experimental style-transfer module for synthesising weather |
 | 💾 | [**autonomous-bot**](https://github.com/aryankhanna1409/autonomous-bot) | ROS 2 stack for an IoT autonomous mobile robot and swarm task allocation |
 | 💾 | [**finintel**](https://github.com/aryankhanna1409/finintel) | RAG system that writes grounded, citation-backed financial reports |
-| 💾 | [**nexus**](https://github.com/aryankhanna1409/nexus) | Outage to cited root cause to approved rollback |
+| 💾 | [**nexus**](https://github.com/aryankhanna1409/nexus) | Network-intelligence and DevSecOps platform (FastAPI, PostgreSQL, React): detects an outage, finds the cited root cause, and an AI agent (Claude or NVIDIA NIM) fixes it, with approval or fully autonomously |
 | 💾 | [**DishDecoded**](https://github.com/aryankhanna1409/dishdecoded) | Snap a dish or menu, get its story and recipe |
 | 💾 | [**credit-card**](https://github.com/aryankhanna1409/credit-card) | Spending-habit segmentation and reward personalisation (published) |
 | 💾 | [**kinematics-calculator**](https://github.com/aryankhanna1409/kinematics-calculator) | Forward and inverse kinematics, animated in 3D |
@@ -64,7 +64,7 @@ The through-line is systems. A robot is a sensing-and-decision pipeline, and a m
 <table align="center">
   <tr>
     <td align="center" width="50%"><a href="https://github.com/aryankhanna1409/dishdecoded"><img src="assets/demos/dishdecoded.gif" alt="DishDecoded demo" /></a><br><sub><b>DishDecoded</b></sub></td>
-    <td align="center" width="50%"><a href="https://github.com/aryankhanna1409/nexus"><img src="assets/demos/nexus-ai.gif" alt="nexus demo" /></a><br><sub><b>nexus</b></sub></td>
+    <td align="center" width="50%"><a href="https://github.com/aryankhanna1409/nexus"><img src="assets/demos/nexus.gif" alt="nexus demo" /></a><br><sub><b>nexus</b></sub></td>
   </tr>
   <tr>
     <td align="center" width="50%"><a href="https://github.com/aryankhanna1409/sentinel"><img src="https://raw.githubusercontent.com/aryankhanna1409/sentinel/main/assets/demo.gif" alt="Sentinel HUD demo" /></a><br><sub><b>Sentinel</b></sub></td>
