@@ -183,7 +183,7 @@ def footer():
 
 if __name__ == "__main__":
     write("hero.svg", hero())
-    for n, t in [("01", "IDENTITY"), ("02", "ENGINEERING"), ("03", "PROJECTS"), ("04", "SYSTEMS"), ("05", "EXPERIENCE"), ("06", "CONTACT")]:
+    for n, t in [("01", "IDENTITY"), ("02", "ENGINEERING"), ("03", "PROJECTS"), ("04", "EXPERIENCE"), ("05", "CONTACT")]:
         write(f"section-{n}.svg", section_bar(n, t))
     write("pipeline.svg", pipeline())
     button("email", "Email")

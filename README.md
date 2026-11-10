@@ -30,9 +30,9 @@ The through-line is systems. A robot is a sensing-and-decision pipeline, and a m
 
 | Stage | Focus | Proof |
 |---|---|---|
-| **Robotics** | Sensing, kinematics, control, embedded hardware | IoT autonomous mobile robot · IR path-following AGV |
+| **Robotics** | Sensing, kinematics, control, embedded hardware | IoT autonomous mobile robot (ROS 2, Nav2, SLAM) |
 | **AI** | Perception and learning for physical and financial problems | Sentinel · reward-optimisation ML (IJCIS 2025) |
-| **Systems** | Telemetry, data models, retrieval, reporting | finintel · Aegis-Net · CollegeOS |
+| **Systems** | Telemetry, data models, retrieval, reporting | finintel · nexus |
 
 <br>
 
@@ -42,11 +42,10 @@ The through-line is systems. A robot is a sensing-and-decision pipeline, and a m
 
 | Robotics & control | Perception | ML & data | Software & embedded |
 |---|---|---|---|
-| ROS / ROS 2 | Computer vision | Random Forest · XGBoost | Python · C++ |
-| Sensor fusion | OpenCV · YOLO11 | K-Means clustering | SQL · SQLAlchemy · Pydantic |
-| Motion planning (PSO, SFLA) | RGB-thermal fusion | RAG chatbots | Streamlit · React |
-| PID differential drive | LiDAR indexing (KD-tree) | LLM apps · Power BI | Arduino · STM32 · Jetson |
-| Kinematics (DH) · IoT | | | Git |
+| ROS 2 · Nav2 · SLAM | Computer vision | Random Forest · XGBoost | Python · C · C++ |
+| Sensor fusion (ESKF) | OpenCV · YOLO11 | K-Means clustering | SQL · React |
+| PID differential drive | RGB-thermal fusion | RAG · GraphRAG | Arduino · Jetson |
+| Kinematics (DH) · IoT | | PyTorch · LLM apps | |
 
 <br>
 
@@ -61,11 +60,7 @@ The through-line is systems. A robot is a sensing-and-decision pipeline, and a m
 | 💾 | [**DishDecoded**](https://github.com/aryankhanna1409/dishdecoded) | Snap a dish or menu, get its story and recipe |
 | 💾 | [**credit-card**](https://github.com/aryankhanna1409/credit-card) | Spending-habit segmentation and reward personalisation (published) |
 | 💾 | [**kinematics-calculator**](https://github.com/aryankhanna1409/kinematics-calculator) | Forward and inverse kinematics, animated in 3D |
-| 💾 | [**overthinkers-assistant**](https://github.com/aryankhanna1409/overthinkers-assistant) | Decision trees from a single sentence |
-| 💾 | [**one-click-crave**](https://github.com/aryankhanna1409/one-click-crave) | Meal picker that learns your habits |
-| 💾 | [**fakespotter**](https://github.com/aryankhanna1409/fakespotter) | See repo |
-| 💾 | [**style-transfer-cnn**](https://github.com/aryankhanna1409/style-transfer-cnn) | See repo |
-| 💾 | [**SnackSave**](https://github.com/aryankhanna1409/SnackSave) · [**murdle**](https://github.com/aryankhanna1409/murdle) · [**auto_wordle**](https://github.com/aryankhanna1409/auto_wordle) | Smaller side projects |
+| 💾 | [**style-transfer-cnn**](https://github.com/aryankhanna1409/style-transfer-cnn) | Neural style transfer, packaged as a CLI with tests |
 
 <table align="center">
   <tr>
@@ -80,23 +75,7 @@ The through-line is systems. A robot is a sensing-and-decision pipeline, and a m
 
 <br>
 
-<img src="assets/section-04.svg" width="100%" alt="04 Systems and case studies" />
-
-<sub>Research, coursework and private builds behind some of the repos above.</sub>
-
-| Project | What it is | Stack |
-|---|---|---|
-| **Aegis-Net** | Network intelligence and autonomous DevSecOps: telemetry → C analytics engine → anomaly detection → root cause → LLM explanation → recommended action | C · Python · LLM |
-| **IoT Autonomous Mobile Robot** | Research robot that takes tasks over IoT and allocates them autonomously, for warehouse and hospital logistics | Embedded · IoT · ROS 2 |
-| **Credit-card reward optimisation** | Segment spenders, then personalise rewards (published) | Random Forest · XGBoost · K-Means |
-| **LiDAR spatial indexing** | KD-tree index for nearest-neighbour and radius queries on streaming point clouds | Python · KD-tree |
-| **IR path-following AGV** | Differential-drive hospital AGV that follows a marked path, with an optional 2-DOF arm | Arduino · PID · DH kinematics |
-| **CollegeOS** | Streamlit attendance manager that keeps an 80% target visible across lecture and lab slots | Streamlit · SQLAlchemy |
-| **Shakespeare RAG chatbot** | Two versions: a Mistral wrapper, and one built from scratch | Python · RAG · Mistral |
-
-<br>
-
-<img src="assets/section-05.svg" width="100%" alt="05 Experience" />
+<img src="assets/section-04.svg" width="100%" alt="04 Experience" />
 
 | When | Role |
 |---|---|
@@ -126,7 +105,7 @@ The through-line is systems. A robot is a sensing-and-decision pipeline, and a m
 
 <br>
 
-<img src="assets/section-06.svg" width="100%" alt="06 Contact" />
+<img src="assets/section-05.svg" width="100%" alt="05 Contact" />
 
 <div align="center">
 
