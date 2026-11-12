@@ -13,7 +13,34 @@ import os
 import sys
 
 W = 880
-CREMA, PARCH, BRASS = "#efdfc4", "#bda98b", "#cfa75c"
+
+# Two palettes: the night lounge (GitHub dark) and the morning cafe (GitHub light).
+# READMEs pick one with <picture>, and every panel fades out at its edges, so it
+# melts into the page instead of sitting on it as a slab.
+THEMES = {
+    "dark": dict(text="#efdfc4", soft="#bda98b", accent="#cfa75c", wall=("#24150c", "#170e09", "#0f0906"),
+                 lamp=("#cfa75c", ".30"), ember=("#7a3a1e", ".55"), glass=("#efdfc4", ".13", ".03"),
+                 green=("#1d4435", ".85", "#efdfc4", ".04"), brass=("#f3d898", "#cfa75c", "#8a5a22"),
+                 neo=("#3a2411", "#22140b"), grain=(".62", ".38", ".2", "1.4", "-.42", ".5"),
+                 shadow=("#000", ".6", "#96623a", ".26"), blobs=("#8a4a22", "#1d4435"), shine="#fff0d2",
+                 ink="#1a0f08", ring="#150d09", tag=("#8fc7ab", "#1d4435")),
+    "light": dict(text="#2c1a10", soft="#6b5238", accent="#9a6b1f", wall=("#fcf7ec", "#f5ead5", "#eedfc4"),
+                  lamp=("#e2bd72", ".40"), ember=("#e3b48a", ".40"), glass=("#ffffff", ".70", ".32"),
+                  green=("#cfe6d6", ".95", "#ffffff", ".35"), brass=("#c79a46", "#9a6b1f", "#6b4513"),
+                  neo=("#fffaf0", "#efe2c8"), grain=(".45", ".30", ".15", "1.0", "-.36", ".35"),
+                  shadow=("#6b4a22", ".28", "#ffffff", ".9"), blobs=("#edc39a", "#b5d6c0"), shine="#ffffff",
+                  ink="#fff7e6", ring="#f6ecd9", tag=("#1d5a42", "#cfe6d6")),
+}
+T = THEMES["dark"]
+CREMA, PARCH, BRASS = T["text"], T["soft"], T["accent"]
+
+
+def use(theme):
+    """Switch every drawing function to one palette."""
+    global T, CREMA, PARCH, BRASS
+    T = THEMES[theme]
+    CREMA, PARCH, BRASS = T["text"], T["soft"], T["accent"]
+
 SERIF = "'Bodoni 72','Bodoni MT',Didot,'Playfair Display',Georgia,'Times New Roman',serif"
 SANS = "'Helvetica Neue',Helvetica,Arial,sans-serif"
 MONO = "'SF Mono',Menlo,Consolas,'DejaVu Sans Mono',monospace"
@@ -65,18 +92,23 @@ def esc(s):
 
 
 def defs(w, h, rx=22):
+    w0, w1, w2 = T["wall"]
+    g = T["grain"]
+    sh = T["shadow"]
     return f"""<defs>
-<linearGradient id="wall" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#24150c"/><stop offset=".6" stop-color="#170e09"/><stop offset="1" stop-color="#0f0906"/></linearGradient>
-<radialGradient id="lamp" cx=".84" cy="0" r=".95"><stop offset="0" stop-color="#cfa75c" stop-opacity=".30"/><stop offset="1" stop-color="#cfa75c" stop-opacity="0"/></radialGradient>
-<radialGradient id="ember" cx="0" cy=".7" r=".8"><stop offset="0" stop-color="#7a3a1e" stop-opacity=".55"/><stop offset="1" stop-color="#7a3a1e" stop-opacity="0"/></radialGradient>
-<linearGradient id="glass" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#efdfc4" stop-opacity=".13"/><stop offset="1" stop-color="#efdfc4" stop-opacity=".03"/></linearGradient>
-<linearGradient id="green" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1d4435" stop-opacity=".85"/><stop offset="1" stop-color="#efdfc4" stop-opacity=".04"/></linearGradient>
-<linearGradient id="brass" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f3d898"/><stop offset=".5" stop-color="#cfa75c"/><stop offset="1" stop-color="#8a5a22"/></linearGradient>
-<linearGradient id="neo" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3a2411"/><stop offset="1" stop-color="#22140b"/></linearGradient>
-<linearGradient id="fade" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#cfa75c" stop-opacity=".75"/><stop offset="1" stop-color="#cfa75c" stop-opacity="0"/></linearGradient>
-<filter id="grain" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency=".11 .005" numOctaves="3" seed="7"/><feColorMatrix values="0 0 0 0 .62  0 0 0 0 .38  0 0 0 0 .2  1.4 0 0 0 -.42"/></filter>
+<linearGradient id="wall" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="{w0}"/><stop offset=".6" stop-color="{w1}"/><stop offset="1" stop-color="{w2}"/></linearGradient>
+<radialGradient id="lamp" cx=".84" cy="0" r=".95"><stop offset="0" stop-color="{T['lamp'][0]}" stop-opacity="{T['lamp'][1]}"/><stop offset="1" stop-color="{T['lamp'][0]}" stop-opacity="0"/></radialGradient>
+<radialGradient id="ember" cx="0" cy=".7" r=".8"><stop offset="0" stop-color="{T['ember'][0]}" stop-opacity="{T['ember'][1]}"/><stop offset="1" stop-color="{T['ember'][0]}" stop-opacity="0"/></radialGradient>
+<linearGradient id="glass" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="{T['glass'][0]}" stop-opacity="{T['glass'][1]}"/><stop offset="1" stop-color="{T['glass'][0]}" stop-opacity="{T['glass'][2]}"/></linearGradient>
+<linearGradient id="green" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="{T['green'][0]}" stop-opacity="{T['green'][1]}"/><stop offset="1" stop-color="{T['green'][2]}" stop-opacity="{T['green'][3]}"/></linearGradient>
+<linearGradient id="brass" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="{T['brass'][0]}"/><stop offset=".5" stop-color="{T['brass'][1]}"/><stop offset="1" stop-color="{T['brass'][2]}"/></linearGradient>
+<linearGradient id="neo" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="{T['neo'][0]}"/><stop offset="1" stop-color="{T['neo'][1]}"/></linearGradient>
+<linearGradient id="fade" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="{BRASS}" stop-opacity=".75"/><stop offset="1" stop-color="{BRASS}" stop-opacity="0"/></linearGradient>
+<filter id="grain" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency=".11 .005" numOctaves="3" seed="7"/><feColorMatrix values="0 0 0 0 {g[0]}  0 0 0 0 {g[1]}  0 0 0 0 {g[2]}  {g[3]} 0 0 0 {g[4]}"/></filter>
 <filter id="blur" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="36"/></filter>
-<filter id="lift" x="-20%" y="-40%" width="140%" height="190%"><feDropShadow dx="3" dy="4" stdDeviation="4" flood-color="#000" flood-opacity=".6"/><feDropShadow dx="-2" dy="-2" stdDeviation="2.5" flood-color="#96623a" flood-opacity=".26"/></filter>
+<filter id="soft" x="-10%" y="-20%" width="120%" height="140%"><feGaussianBlur stdDeviation="7"/></filter>
+<filter id="lift" x="-20%" y="-40%" width="140%" height="190%"><feDropShadow dx="3" dy="4" stdDeviation="4" flood-color="{sh[0]}" flood-opacity="{sh[1]}"/><feDropShadow dx="-2" dy="-2" stdDeviation="2.5" flood-color="{sh[2]}" flood-opacity="{sh[3]}"/></filter>
+<mask id="feather"><rect x="13" y="13" width="{w-26}" height="{h-26}" rx="{rx}" fill="#fff" filter="url(#soft)"/></mask>
 <clipPath id="clip"><rect width="{w}" height="{h}" rx="{rx}"/></clipPath>
 </defs>"""
 
@@ -87,20 +119,20 @@ def svg(w, h, body, label, rx=22):
 
 
 def wall(w, h, blobs=True, rx=22):
-    b = f'<g clip-path="url(#clip)"><rect width="{w}" height="{h}" fill="url(#wall)"/>'
+    """The wood wall. Its edges are feathered so the panel dissolves into the page."""
+    b = f'<g mask="url(#feather)"><rect width="{w}" height="{h}" fill="url(#wall)"/>'
     b += f'<rect width="{w}" height="{h}" fill="url(#ember)"/><rect width="{w}" height="{h}" fill="url(#lamp)"/>'
-    b += f'<rect width="{w}" height="{h}" filter="url(#grain)" opacity=".5"/>'
+    b += f'<rect width="{w}" height="{h}" filter="url(#grain)" opacity="{T["grain"][5]}"/>'
     if blobs:
-        b += (f'<ellipse cx="{w*.12:.0f}" cy="{h*.75:.0f}" rx="130" ry="90" fill="#8a4a22" opacity=".5" filter="url(#blur)">'
+        b += (f'<ellipse cx="{w*.12:.0f}" cy="{h*.75:.0f}" rx="130" ry="90" fill="{T["blobs"][0]}" opacity=".5" filter="url(#blur)">'
               f'<animateTransform attributeName="transform" type="translate" values="0 0;34 -18;-18 12;0 0" dur="24s" repeatCount="indefinite"/></ellipse>')
-        b += (f'<ellipse cx="{w*.62:.0f}" cy="{h*.95:.0f}" rx="150" ry="80" fill="#1d4435" opacity=".55" filter="url(#blur)">'
+        b += (f'<ellipse cx="{w*.62:.0f}" cy="{h*.95:.0f}" rx="150" ry="80" fill="{T["blobs"][1]}" opacity=".55" filter="url(#blur)">'
               f'<animateTransform attributeName="transform" type="translate" values="0 0;-40 -14;22 10;0 0" dur="29s" repeatCount="indefinite"/></ellipse>')
-    b += '</g>'
-    b += f'<rect x=".5" y=".5" width="{w-1}" height="{h-1}" rx="{rx}" fill="none" stroke="{BRASS}" stroke-opacity=".3"/>'
-    return b
+    return b + '</g>'
 
 
-def t(x, y, s, size, fill=CREMA, family=SANS, italic=False, anchor=None, ls=None, weight=None, opacity=None):
+def t(x, y, s, size, fill=None, family=SANS, italic=False, anchor=None, ls=None, weight=None, opacity=None):
+    fill = fill or CREMA
     a = f' font-style="italic"' if italic else ""
     a += f' text-anchor="{anchor}"' if anchor else ""
     a += f' letter-spacing="{ls}"' if ls else ""
@@ -109,7 +141,8 @@ def t(x, y, s, size, fill=CREMA, family=SANS, italic=False, anchor=None, ls=None
     return f'<text x="{x}" y="{y}" font-family="{family}" font-size="{size}" fill="{fill}"{a}>{esc(s)}</text>'
 
 
-def eyebrow(x, y, s, fill=BRASS, anchor=None):
+def eyebrow(x, y, s, fill=None, anchor=None):
+    fill = fill or BRASS
     return t(x, y, s.upper(), 11.5, fill, MONO, ls="2.6", anchor=anchor)
 
 
@@ -126,7 +159,8 @@ def wrap(text, n):
     return lines
 
 
-def para(x, y, text, n, size=14, fill=PARCH, lh=None, family=SANS, italic=False):
+def para(x, y, text, n, size=14, fill=None, lh=None, family=SANS, italic=False):
+    fill = fill or PARCH
     lh = lh or round(size * 1.5)
     out = ""
     for i, ln in enumerate(wrap(text, n)):
@@ -136,7 +170,7 @@ def para(x, y, text, n, size=14, fill=PARCH, lh=None, family=SANS, italic=False)
 
 def glass(x, y, w, h, rx=18, fill="glass"):
     return (f'<rect x="{x}" y="{y}" width="{w}" height="{h}" rx="{rx}" fill="url(#{fill})" stroke="{BRASS}" stroke-opacity=".34"/>'
-            f'<path d="M{x+rx} {y+1.2} H{x+w-rx}" stroke="#fff0d2" stroke-opacity=".22" stroke-linecap="round"/>')
+            f'<path d="M{x+rx} {y+1.2} H{x+w-rx}" stroke="{T['shine']}" stroke-opacity=".22" stroke-linecap="round"/>')
 
 
 def chip_w(s):
@@ -158,14 +192,14 @@ def chips(x, y, items, maxx=W - 40, gap=9):
 
 def tag(x, y, s, green=False):
     w = round(len(s) * 7.6 + 22)
-    col = "#8fc7ab" if green else BRASS
-    bg = f'fill="#1d4435" fill-opacity=".5"' if green else 'fill="none"'
+    col = T["tag"][0] if green else BRASS
+    bg = f'fill="{T["tag"][1]}" fill-opacity=".5"' if green else 'fill="none"'
     return (f'<rect x="{x}" y="{y}" width="{w}" height="22" rx="11" {bg} stroke="{col}" stroke-opacity=".6"/>'
             + t(x + w / 2, y + 15, s.upper(), 10.5, col, MONO, anchor="middle", ls="1.4")), w
 
 
 def steam(x, y, s=1.0, n=3):
-    out = f'<g transform="translate({x},{y}) scale({s})" fill="none" stroke="{CREMA}" stroke-width="2" stroke-linecap="round">'
+    out = f'<g transform="translate({x},{y}) scale({s})" fill="none" stroke="{PARCH}" stroke-width="2" stroke-linecap="round">'
     for i in range(n):
         dx = i * 18
         out += (f'<path d="M{dx} 40c-8-10 8-15 0-25s6-12 2-18" opacity="0">'
@@ -177,7 +211,7 @@ def steam(x, y, s=1.0, n=3):
 def bean(x, y, r=7, rot=-28, on=True):
     f = 'fill="url(#brass)"' if on else f'fill="{BRASS}" fill-opacity=".18"'
     return (f'<g transform="translate({x},{y}) rotate({rot})"><ellipse rx="{r*.72:.1f}" ry="{r}" {f}/>'
-            f'<path d="M0 {-r*.8:.1f}c{r*.45:.1f} {r*.5:.1f} {-r*.45:.1f} {r*1.1:.1f} 0 {r*1.6:.1f}" fill="none" stroke="#1a0f08" stroke-opacity=".7" stroke-width="1"/></g>')
+            f'<path d="M0 {-r*.8:.1f}c{r*.45:.1f} {r*.5:.1f} {-r*.45:.1f} {r*1.1:.1f} 0 {r*1.6:.1f}" fill="none" stroke="{T['ink']}" stroke-opacity=".7" stroke-width="1"/></g>')
 
 
 # ------------------------------------------------------------------ icons (in a 170 x 170 box)
@@ -264,7 +298,7 @@ def loop_row(y, current=None, x0=40, x1=W - 40, compact=False):
             b += (f'<circle cx="{x}" cy="{y}" r="15" fill="none" stroke="{BRASS}" stroke-opacity=".7">'
                   f'<animate attributeName="r" values="12;19;12" dur="2.6s" repeatCount="indefinite"/>'
                   f'<animate attributeName="stroke-opacity" values=".8;0;.8" dur="2.6s" repeatCount="indefinite"/></circle>')
-        b += f'<circle cx="{x}" cy="{y}" r="{9 if repo == current else 7}" fill="url(#brass)" stroke="#150d09" stroke-width="3" opacity="{op}"/>'
+        b += f'<circle cx="{x}" cy="{y}" r="{9 if repo == current else 7}" fill="url(#brass)" stroke="{T['ring']}" stroke-width="3" opacity="{op}"/>'
         if compact:
             b += t(x, y + 26, f"{brew.upper()} · {verb}", 10, BRASS if repo == current else PARCH, MONO, anchor="middle", ls="1.2", opacity=op)
         else:
@@ -482,26 +516,30 @@ def repo_banner(key):
     return svg(W, h, b, f"{name}: {tagline}")
 
 
-def write(path, content):
+def write(path, make):
+    """Write `make()` twice: NAME.svg for the dark palette, NAME-light.svg for the light one."""
     os.makedirs(os.path.dirname(path), exist_ok=True)
-    with open(path, "w") as f:
-        f.write(content)
+    for theme, out in (("dark", path), ("light", path.replace(".svg", "-light.svg"))):
+        use(theme)
+        with open(out, "w") as f:
+            f.write(make())
+    use("dark")
 
 
 if __name__ == "__main__":
     here = os.path.dirname(os.path.abspath(__file__))
     if len(sys.argv) >= 4 and sys.argv[1] == "--repo":
         name, d = sys.argv[2], sys.argv[3]
-        write(os.path.join(d, "assets", "banner.svg"), repo_banner(name))
+        write(os.path.join(d, "assets", "banner.svg"), lambda: repo_banner(name))
         if any(s[2] == name for s in STOPS):
-            write(os.path.join(d, "assets", "loop.svg"), loop(name))
+            write(os.path.join(d, "assets", "loop.svg"), lambda: loop(name))
         else:
-            write(os.path.join(d, "assets", "footer.svg"), footer("Off the menu.", "FROM THE ARCHIVE · ARYAN KHANNA"))
+            write(os.path.join(d, "assets", "footer.svg"), lambda: footer("Off the menu.", "FROM THE ARCHIVE · ARYAN KHANNA"))
         print("wrote banner + footer for", name)
     else:
         out = os.path.join(here, "..", "assets")
-        write(f"{out}/hero.svg", hero())
-        write(f"{out}/loop.svg", loop())
+        write(f"{out}/hero.svg", hero)
+        write(f"{out}/loop.svg", loop)
         for n, (k, p, e) in {"loop": ("The house blend", "One loop,", "five pours"),
                              "archive": ("Off the menu", "From the", "archive"),
                              "roast": ("Experience", "The", "roast"),
@@ -509,18 +547,20 @@ if __name__ == "__main__":
                              "notes": ("Skills", "Tasting", "notes"),
                              "origin": ("Education", "The", "origin"),
                              "contact": ("Last call", "Let's talk over", "coffee")}.items():
-            write(f"{out}/section-{n}.svg", section_bar(k, p, e))
-        for s in STOPS:
-            write(f"{out}/projects/{s[2]}.svg", repo_banner(s[2]))
+            write(f"{out}/section-{n}.svg", lambda k=k, p=p, e=e: section_bar(k, p, e))
+        for st in STOPS:
+            write(f"{out}/projects/{st[2]}.svg", lambda st=st: repo_banner(st[2]))
         for k in ARCHIVE:
-            write(f"{out}/archive/{k}.svg", archive_card(k))
-        write(f"{out}/roast.svg", roast())
-        write(f"{out}/reserve.svg", reserve())
-        write(f"{out}/notes.svg", notes())
-        write(f"{out}/origin.svg", origin())
+            write(f"{out}/archive/{k}.svg", lambda k=k: archive_card(k))
+        write(f"{out}/roast.svg", roast)
+        write(f"{out}/reserve.svg", reserve)
+        write(f"{out}/notes.svg", notes)
+        write(f"{out}/origin.svg", origin)
         for n, k, v in [("email", "Email", "aryankhanna2k22@gmail.com"), ("github", "GitHub", "github.com/aryankhanna1409"),
                         ("linkedin", "LinkedIn", "linkedin.com/in/aryandkhanna"), ("orcid", "ORCID", "0009-0001-1710-2367")]:
-            write(f"{out}/btn-{n}.svg", button(k, v))
-        write(f"{out}/footer.svg", footer())
-        write(f"{out}/avatar.svg", avatar())
+            write(f"{out}/btn-{n}.svg", lambda k=k, v=v: button(k, v))
+        write(f"{out}/footer.svg", footer)
+        use("dark")
+        with open(f"{out}/avatar.svg", "w") as f:
+            f.write(avatar())
         print("profile assets written")
