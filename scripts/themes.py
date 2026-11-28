@@ -287,7 +287,7 @@ def footer(name, p, loop=False):
 
 def mosaic(theme):
     """Hybrid hero for the profile: every repo's scene in its own palette."""
-    names = list(REPOS)
+    names = [n for n in REPOS if n != "nexus"]  # A.T.H.E.N.A. replaces nexus
     cols, gap = 5, 12
     cw = (W - 80 - (cols - 1) * gap) / cols
     ch = cw * 220 / 300
