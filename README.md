@@ -38,7 +38,7 @@ Final-year robotics engineer, **moving up the stack** from machines to the AI an
 
 I'm finishing a **B.Tech in Robotics & Automation** at Symbiosis Institute of Technology, Pune (2023–2027), with a diploma in business administration from SIBM Pune on the side. Since September 2024 I've been a research assistant working across machine learning, autonomous robotics and computer vision, including an IoT-enabled autonomous mobile robot, a multimodal RGB-thermal search-and-rescue system and a published ML model for credit-card reward personalisation. The through-line is systems: a robot is a sensing-and-decision pipeline, and a model is only useful inside a system that feeds and checks it. That's where I'm heading: AI and software systems that hold up outside a notebook. From January 2027 I'm doing that for real as a **Forward Deployed Engineer intern at Incedo** (Hi-Tech, Pune), part of its North Stars program.
 
-- 🔭 **Currently working on:** [AETHER](https://github.com/aryankhanna1409/A.E.T.H.E.R), a fully local voice assistant, [A.T.H.E.N.A.](https://github.com/aryankhanna1409/a.t.h.e.n.a), a self-healing telecom ops platform (moving it from synthetic to real data), **Aegis-Net** for my Incedo internship, and [Sentinel](https://github.com/aryankhanna1409/sentinel), an RGB-thermal search-and-rescue scanner
+- 🔭 **Currently working on:** [AETHER](https://github.com/aryankhanna1409/A.E.T.H.E.R), a fully local voice assistant, [A.T.H.E.N.A.](https://github.com/aryankhanna1409/a.t.h.e.n.a), my Incedo FDE project: a self-healing telecom ops platform (moving it from synthetic to real data), and [Sentinel](https://github.com/aryankhanna1409/sentinel), an RGB-thermal search-and-rescue scanner
 - 🏅 **Recent:** AWS Certified AI Practitioner (Oct 2026) · 12 Claude Academy courses · DD Robocon 2026 National Finals at IIT Delhi · patent application published for an IoT search-and-rescue robot
 - 💡 **Interested in:** computer vision, embedded systems, applied AI
 - 💬 **Ask me about:** YOLO pipelines, ROS 2 and Nav2, sensor fusion, RAG systems, robot swarms
@@ -153,8 +153,7 @@ I'm finishing a **B.Tech in Robotics & Automation** at Symbiosis Institute of Te
 
 | Project | What it is | Stack |
 |---|---|---|
-| **A.T.H.E.N.A.** <br><sub>flagship · systems</sub> | Telecom AI ops: C call-log engine → 17-KPI anomaly detection → correlation / root cause → LLM explanation → policy-gated agent fix, approved in Slack or Teams. Code: [a.t.h.e.n.a](https://github.com/aryankhanna1409/a.t.h.e.n.a) | C · FastAPI · PyTorch · NVIDIA NIM · Grafana |
-| **Aegis-Net** <br><sub>internship · in progress</sub> | My project for the Incedo FDE internship. Private for now | — |
+| **A.T.H.E.N.A.** <br><sub>flagship · Incedo FDE project</sub> | Built for Incedo's FDE program, the advanced successor to [nexus](https://github.com/aryankhanna1409/nexus) (v1.0). Telecom AI ops: C call-log engine → 17-KPI anomaly detection → correlation / root cause → LLM explanation → policy-gated agent fix, approved in Slack or Teams. Code: [a.t.h.e.n.a](https://github.com/aryankhanna1409/a.t.h.e.n.a) | C · FastAPI · PyTorch · NVIDIA NIM · Grafana |
 | **Swarm auction on OpenRMF** <br><sub>multi-robot · paper in progress</sub> | Robots bid their ETA for each task and the dispatcher assigns the best bid, running on the OpenRMF office demo | ROS 2 · OpenRMF · Python |
 | **IoT Autonomous Mobile Robot** <br><sub>robotics · research</sub> | Research robot that takes tasks over IoT and allocates them autonomously, framed for warehouse and hospital-logistics use. Public ROS 2 side: [autonomous-bot](https://github.com/aryankhanna1409/autonomous-bot) | Embedded · IoT · task allocation |
 | **Sentinel** <br><sub>computer vision · research</sub> | RGB + thermal fusion so people are easier to find in the dark. Code: [sentinel](https://github.com/aryankhanna1409/sentinel) | YOLO11 · OpenCV · thermal |
@@ -180,7 +179,7 @@ I'm finishing a **B.Tech in Robotics & Automation** at Symbiosis Institute of Te
 
 | When | Role | What I did |
 |---|---|---|
-| Jan – Jul 2027 | **Forward Deployed Engineer Intern** · Incedo, Hi-Tech, Pune | Incoming. North Stars intern program, one of 14 FDEs hired from SIT |
+| Jan – Jul 2027 | **Forward Deployed Engineer Intern** · Incedo, Hi-Tech, Pune | Incoming. North Stars intern program, one of 14 FDEs hired from SIT. FDE project: A.T.H.E.N.A., built on nexus (v1.0) |
 | Jan – Jun 2026 | **Design Lead, CV Mentor & Documentation Lead** · Team Robominds, DD Robocon 2026 | Camera calibration, datasets and vision for the autonomous and swarm bots; taught CV to juniors. 90/100 in prelims, National Finals at IIT Delhi |
 | Sep 2024 – now | **Research Assistant** · Symbiosis Institute of Technology | Faculty-led work across ML, autonomous robotics and computer vision: the credit-card reward model (published), an IoT warehouse robot, and the RGB-thermal rescue scanner now in development |
 | Jul – Dec 2025 | **Research Intern** · Symbiosis Centre for Applied AI | Built and evaluated models for real-world deployment, compliance and automation; designed validation experiments; literature reviews |
